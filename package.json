@@ -2,9 +2,13 @@
   "name": "bot-creation",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "16.x"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.ts",
     "tsc": "tsc -w --skipLibCheck"
   },
   "keywords": [],
