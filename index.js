@@ -39,7 +39,6 @@ client.on('ready', function () {
     console.log('Bot active and online.');
     new wokcommands_1.default(client, {
         commandsDir: path_1.default.join(__dirname, 'commands'),
-        typeScript: true,
         testServers: ['884501544815452180', '547372410664517632'],
     })
         .setBotOwner('444426639665790978'); // Sets Bot's Owner.
