@@ -36,4 +36,4 @@ const client = new DiscordJS.Client({
       }
   })
 
-  client.login(process.env.TOKEN)
+  client.login(process.env.HEROKU_TOKEN)
