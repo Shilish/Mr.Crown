@@ -53,4 +53,4 @@ client.on('messageCreate', function (message) {
         });
     }
 });
-client.login(process.env.TOKEN);
+client.login(process.env.HEROKU_TOKEN);
