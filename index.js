@@ -41,6 +41,7 @@ client.on('ready', function () {
     new wokcommands_1.default(client, {
         commandsDir: path_1.default.join(__dirname, 'commands'),
         featuresDir: path_1.default.join(__dirname, 'features'),
+        typeScript: true,
         testServers: ['884501544815452180', '547372410664517632'],
     })
         .setBotOwner('444426639665790978'); // Sets Bot's Owner.
@@ -52,4 +53,4 @@ client.on('messageCreate', function (message) {
         });
     }
 });
-client.login(process.env.HEROKU_TOKEN);
+client.login(process.env.TOKEN);

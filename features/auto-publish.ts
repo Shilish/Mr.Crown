@@ -10,13 +10,8 @@ export default (client: Client, instance: WOKCommands) => {
 
     if (messageCreate.channel.type === 'GUILD_NEWS') {
         messageCreate.crosspost()
-        console.log('Crossposted message - '+messageCreate.createdAt)
+        console.log('Crossposted/Published message - '+messageCreate.createdAt)
     }
-
-    // if (messageCreate.channel.type === 'GUILD_NEWS') {
-    //     messageCreate.crosspost()
-    //     console.log('Message was Published')
-    // }
-
+    
     })
 }
