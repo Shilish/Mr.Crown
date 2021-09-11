@@ -1,5 +1,6 @@
 // npm run dev - for running nodemon
 // npm run tsc - for running ts to js compiler
+// Remove typeScript: true, from index.js after compiling
 
 import DiscordJS, { Intents } from 'discord.js'
 import WOKCommands from 'wokcommands'
@@ -19,7 +20,8 @@ const client = new DiscordJS.Client({
 
       new WOKCommands(client, {
         commandsDir: path.join(__dirname, 'commands'),
-        typeScript: true,
+        featuresDir: path.join(__dirname, 'features'),
+        typeScript: true,          // Remove in index.js after compiling.
         testServers: ['884501544815452180','547372410664517632'],
       })
 
@@ -36,4 +38,4 @@ const client = new DiscordJS.Client({
       }
   })
 
-  client.login(process.env.HEROKU_TOKEN)
+  client.login(process.env.TOKEN)
