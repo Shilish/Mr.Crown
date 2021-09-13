@@ -38,12 +38,33 @@ var client = new discord_js_1.default.Client({
 });
 client.on('ready', function () {
     console.log('Bot active and online.');
+    client.users.fetch('444426639665790978').then(function (user) {
+        user.send('Bot was restarted --- ' + client.readyAt);
+    });
     new wokcommands_1.default(client, {
         commandsDir: path_1.default.join(__dirname, 'commands'),
         featuresDir: path_1.default.join(__dirname, 'features'),
         testServers: ['884501544815452180', '547372410664517632'],
     })
-        .setBotOwner('444426639665790978'); // Sets Bot's Owner.
+        .setBotOwner('444426639665790978') // Sets Bot's Owner.
+        .setCategorySettings([
+        {
+            name: 'Configuration',
+            emoji: '⚙️',
+            hidden: true
+        },
+        {
+            name: 'Misc',
+            emoji: '🛠️'
+        },
+        {
+            // You can also use custom emojis by specifying the ID
+            // NOTE: Bot MUST be in the same server as the emoji
+            name: 'Fun',
+            emoji: '🎭',
+            //customEmoji: true
+        },
+    ]);
 });
 client.on('messageCreate', function (message) {
     if (message.content === 'status') {

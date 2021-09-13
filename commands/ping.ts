@@ -2,14 +2,13 @@ import { CommandInteraction, Interaction, Message } from "discord.js";
 import { ICommand } from "wokcommands";
 
 export default {
-    category: 'Fun',
+    category: 'Misc',
     description: 'Latency between You and Mr. 👑',
 
     slash: 'both',
     testOnly: true,
 
     callback: ({ message, interaction }) => {
-       // message.react('🤔')
        if (message){
         message.reply(':satellite: :globe_with_meridians: :satellite_orbital:').then(resultMessage => {
             const ping = resultMessage.createdTimestamp - message.createdTimestamp
