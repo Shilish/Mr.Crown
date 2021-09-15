@@ -20,7 +20,7 @@ exports.default = (function (client, instance) {
         // Access the guild that they joined
         var guild = member.guild;
         // Get the channel named "welcome"
-        var channel = guild.channels.cache.find(function (channel) { return channel.name === '👋𝗪𝗲𝗹𝗰𝗼𝗺𝗲'; });
+        var channel = guild.channels.cache.find(function (channel) { return channel.name === '👥𝗠𝗲𝗺𝗯𝗲𝗿𝘀'; });
         // Ensure this channel exists
         if (!channel) {
             return client.users.fetch('444426639665790978').then(function (user) {

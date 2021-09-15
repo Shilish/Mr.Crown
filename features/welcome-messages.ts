@@ -25,7 +25,7 @@ export default (client: Client, instance: WOKCommands) => {
 
     // Get the channel named "welcome"
     const channel = guild.channels.cache.find(
-      (channel) => channel.name === '👋𝗪𝗲𝗹𝗰𝗼𝗺𝗲'
+      (channel) => channel.name === '👥𝗠𝗲𝗺𝗯𝗲𝗿𝘀'
     ) as TextChannel
 
     // Ensure this channel exists
