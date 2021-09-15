@@ -23,7 +23,6 @@ export default {
   expectedArgs: '<status>',
   
   // Make this command owner only.
-  // We will set the owner ID(s) in the next code snippet.
   ownerOnly: true,
   hidden: true,
   

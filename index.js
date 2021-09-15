@@ -33,7 +33,8 @@ dotenv_1.default.config();
 var client = new discord_js_1.default.Client({
     intents: [
         discord_js_1.Intents.FLAGS.GUILDS,
-        discord_js_1.Intents.FLAGS.GUILD_MESSAGES
+        discord_js_1.Intents.FLAGS.GUILD_MESSAGES,
+        discord_js_1.Intents.FLAGS.GUILD_MEMBERS
     ],
 });
 client.on('ready', function () {
@@ -45,6 +46,13 @@ client.on('ready', function () {
         commandsDir: path_1.default.join(__dirname, 'commands'),
         featuresDir: path_1.default.join(__dirname, 'features'),
         testServers: ['884501544815452180', '547372410664517632'],
+        disabledDefaultCommands: [
+            'help'
+            // 'command',
+            // 'language',
+            // 'prefix',
+            // 'requiredrole'
+        ],
     })
         .setBotOwner('444426639665790978') // Sets Bot's Owner.
         .setCategorySettings([

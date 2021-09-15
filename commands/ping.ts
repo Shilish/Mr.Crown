@@ -1,4 +1,4 @@
-import { CommandInteraction, Interaction, Message } from "discord.js";
+import { CommandInteraction, Interaction, Intents, Message, Client } from "discord.js";
 import { ICommand } from "wokcommands";
 
 export default {

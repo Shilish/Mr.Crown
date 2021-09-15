@@ -20,7 +20,6 @@ exports.default = {
     minArgs: 1,
     expectedArgs: '<status>',
     // Make this command owner only.
-    // We will set the owner ID(s) in the next code snippet.
     ownerOnly: true,
     hidden: true,
     // This method is invoked only once whenever the command is registered

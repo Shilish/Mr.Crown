@@ -5,7 +5,6 @@ exports.default = {
     category: 'Configuration',
     description: 'Lists all servers the bot is in',
     // Make this command owner only.
-    // We will set the owner ID(s) in the next code snippet.
     ownerOnly: true,
     hidden: true,
     callback: function (_a) {
@@ -13,5 +12,6 @@ exports.default = {
         client.guilds.cache.forEach(function (guild) {
             message.author.send("**" + guild.name + "** has **" + guild.memberCount + "** members and was created on - *" + guild.createdAt + "*");
         });
+        //TODO: Get server owner names and how many servers the client is a part of.
     },
 };

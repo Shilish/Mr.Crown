@@ -2,7 +2,7 @@
 // npm run tsc - for running ts to js compiler
 // Remove typeScript: true, from index.js after compiling
 
-import DiscordJS, { Guild, Intents } from 'discord.js'
+import DiscordJS, { ApplicationCommandManager, CommandInteraction, Guild, Intents, MessageEmbed } from 'discord.js'
 import WOKCommands from 'wokcommands'
 import path from 'path'
 import dotenv from 'dotenv'
@@ -11,7 +11,8 @@ dotenv.config()
 const client = new DiscordJS.Client({
     intents: [
      Intents.FLAGS.GUILDS,
-     Intents.FLAGS.GUILD_MESSAGES
+     Intents.FLAGS.GUILD_MESSAGES,
+     Intents.FLAGS.GUILD_MEMBERS
     ],
   })
 
@@ -21,17 +22,24 @@ const client = new DiscordJS.Client({
       user.send('Bot was restarted --- '+client.readyAt)
     })
 
-      new WOKCommands(client, {
-        commandsDir: path.join(__dirname, 'commands'),
-        featuresDir: path.join(__dirname, 'features'),
-        typeScript: true,          // Remove in index.js after compiling.
-        testServers: ['884501544815452180','547372410664517632'],
-      })
+    new WOKCommands(client, {
+      commandsDir: path.join(__dirname, 'commands'),
+      featuresDir: path.join(__dirname, 'features'),
+      typeScript: true,          // Remove in index.js after compiling.
+      testServers: ['884501544815452180','547372410664517632'],
+      disabledDefaultCommands: [
+        'help'
+        // 'command',
+        // 'language',
+        // 'prefix',
+        // 'requiredrole'
+      ],
+    })
 
-      .setBotOwner('444426639665790978')    // Sets Bot's Owner.
+    .setBotOwner('444426639665790978')    // Sets Bot's Owner.
 
-      .setCategorySettings([
-        {
+    .setCategorySettings([
+      {
             name: 'Configuration',
             emoji: '⚙️',
             hidden: true
@@ -46,11 +54,9 @@ const client = new DiscordJS.Client({
             name: 'Fun',
             emoji: '🎭',
             //customEmoji: true
-        },
-      ])
+      },
+    ])
   })
-
-  
 
   client.on('messageCreate', (message) =>{
       if (message.content === 'status'){
