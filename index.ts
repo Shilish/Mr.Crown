@@ -30,7 +30,7 @@ const client = new DiscordJS.Client({
       commandsDir: path.join(__dirname, 'commands'),
       featuresDir: path.join(__dirname, 'features'),
       typeScript: true,          // Remove in index.js after compiling.
-      testServers: ['884501544815452180','547372410664517632'],
+      //testServers: ['884501544815452180','547372410664517632'],
       disabledDefaultCommands: [
         'help'
         // 'command',

@@ -6,7 +6,7 @@ export default {
     description: 'Roll a Die',
 
     slash: 'both',
-    testOnly: true,
+    //testOnly: true,
 
     callback: ({message, interaction}) => {
         const val = (Math.floor(Math.random() * (6 * 1) + 1)).toString()

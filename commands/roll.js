@@ -5,7 +5,7 @@ exports.default = {
     category: 'Fun',
     description: 'Roll a Die',
     slash: 'both',
-    testOnly: true,
+    //testOnly: true,
     callback: function (_a) {
         var message = _a.message, interaction = _a.interaction;
         var val = (Math.floor(Math.random() * (6 * 1) + 1)).toString();

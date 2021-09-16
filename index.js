@@ -49,7 +49,7 @@ client.on('ready', function () {
     new wokcommands_1.default(client, {
         commandsDir: path_1.default.join(__dirname, 'commands'),
         featuresDir: path_1.default.join(__dirname, 'features'),
-        testServers: ['884501544815452180', '547372410664517632'],
+        //testServers: ['884501544815452180','547372410664517632'],
         disabledDefaultCommands: [
             'help'
             // 'command',
