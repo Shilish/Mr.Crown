@@ -6,7 +6,7 @@ export default {
     description: 'Flip a coin',
 
     slash: 'both',
-    testOnly: true,
+    //testOnly: true,
 
     callback: ({message, interaction}) => {
         const val = (Math.floor(Math.random() * (2 * 1) + 1)).toString()
@@ -16,7 +16,7 @@ export default {
             if (val === '1'){
                 return new MessageEmbed()
                 .setColor('RANDOM')
-                .setTitle('Flip a Coin.')
+                .setTitle('__Flip a Coin.__')
                 .setDescription(':regional_indicator_h: :regional_indicator_e: :regional_indicator_a: :regional_indicator_d: :regional_indicator_s:')
                 .setFooter(''+uName)
                 .setTimestamp()
@@ -24,7 +24,7 @@ export default {
             if (val === '2'){
                 return new MessageEmbed()
                 .setColor('RANDOM')
-                .setTitle('Flip a Coin.')
+                .setTitle('__Flip a Coin.__')
                 .setDescription(':regional_indicator_t: :regional_indicator_a: :regional_indicator_i: :regional_indicator_l: :regional_indicator_s:')
                 .setFooter(''+uName)
                 .setTimestamp()
@@ -35,7 +35,7 @@ export default {
             if (val === '1'){
                 return new MessageEmbed()
                 .setColor('RANDOM')
-                .setTitle('Flip a Coin.')
+                .setTitle('__Flip a Coin.__')
                 .setDescription(':regional_indicator_h: :regional_indicator_e: :regional_indicator_a: :regional_indicator_d: :regional_indicator_s:')
                 .setFooter(''+uName)
                 .setTimestamp()
@@ -43,7 +43,7 @@ export default {
             if (val === '2'){
                 return new MessageEmbed()
                 .setColor('RANDOM')
-                .setTitle('Flip a Coin.')
+                .setTitle('__Flip a Coin.__')
                 .setDescription(':regional_indicator_t: :regional_indicator_a: :regional_indicator_i: :regional_indicator_l: :regional_indicator_s:')
                 .setFooter(''+uName)
                 .setTimestamp()

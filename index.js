@@ -34,7 +34,11 @@ var client = new discord_js_1.default.Client({
     intents: [
         discord_js_1.Intents.FLAGS.GUILDS,
         discord_js_1.Intents.FLAGS.GUILD_MESSAGES,
-        discord_js_1.Intents.FLAGS.GUILD_MEMBERS
+        discord_js_1.Intents.FLAGS.GUILD_MEMBERS,
+        discord_js_1.Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
+        discord_js_1.Intents.FLAGS.DIRECT_MESSAGES,
+        discord_js_1.Intents.FLAGS.DIRECT_MESSAGE_REACTIONS,
+        discord_js_1.Intents.FLAGS.GUILD_VOICE_STATES
     ],
 });
 client.on('ready', function () {
@@ -70,7 +74,7 @@ client.on('ready', function () {
             // NOTE: Bot MUST be in the same server as the emoji
             name: 'Fun',
             emoji: '🎭',
-            //customEmoji: true
+            //customEmoji: true.
         },
     ]);
 });

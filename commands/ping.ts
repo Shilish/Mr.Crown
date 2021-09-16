@@ -1,4 +1,4 @@
-import { CommandInteraction, Interaction, Intents, Message, Client } from "discord.js";
+import { Message } from "discord.js";
 import { ICommand } from "wokcommands";
 
 export default {
@@ -6,7 +6,7 @@ export default {
     description: 'Latency between You and Mr. 👑',
 
     slash: 'both',
-    testOnly: true,
+    //testOnly: true,
 
     callback: ({ message, interaction }) => {
        if (message){

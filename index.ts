@@ -2,7 +2,7 @@
 // npm run tsc - for running ts to js compiler
 // Remove typeScript: true, from index.js after compiling
 
-import DiscordJS, { ApplicationCommandManager, CommandInteraction, Guild, Intents, MessageEmbed } from 'discord.js'
+import DiscordJS, { ApplicationCommandManager, ClientVoiceManager, CommandInteraction, Guild, Intents, MessageEmbed } from 'discord.js'
 import WOKCommands from 'wokcommands'
 import path from 'path'
 import dotenv from 'dotenv'
@@ -12,7 +12,11 @@ const client = new DiscordJS.Client({
     intents: [
      Intents.FLAGS.GUILDS,
      Intents.FLAGS.GUILD_MESSAGES,
-     Intents.FLAGS.GUILD_MEMBERS
+     Intents.FLAGS.GUILD_MEMBERS,
+     Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
+     Intents.FLAGS.DIRECT_MESSAGES,
+     Intents.FLAGS.DIRECT_MESSAGE_REACTIONS,
+     Intents.FLAGS.GUILD_VOICE_STATES
     ],
   })
 
@@ -53,7 +57,7 @@ const client = new DiscordJS.Client({
             // NOTE: Bot MUST be in the same server as the emoji
             name: 'Fun',
             emoji: '🎭',
-            //customEmoji: true
+            //customEmoji: true.
       },
     ])
   })

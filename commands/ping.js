@@ -4,7 +4,7 @@ exports.default = {
     category: 'Misc',
     description: 'Latency between You and Mr. 👑',
     slash: 'both',
-    testOnly: true,
+    //testOnly: true,
     callback: function (_a) {
         var message = _a.message, interaction = _a.interaction;
         if (message) {

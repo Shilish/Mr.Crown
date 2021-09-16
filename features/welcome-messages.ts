@@ -1,18 +1,3 @@
-// import { Client, TextChannel, Message, Guild, Intents } from 'discord.js'
-// import WOKCommands from 'wokcommands'
-
-// export default (client: Client, instance: WOKCommands) => {
-//   // Listen for new messages
-//   client.on('guildMemberAdd', (member) => {
-//     console.log('member joins')
-
-//     // if (member.) {
-//     //     messageCreate.crosspost()
-//     //     console.log('Crossposted/Published message - '+messageCreate.createdAt)
-//     // }
-    
-//     })
-// }
 import { Client, TextChannel, MessageEmbed } from 'discord.js'
 import WOKCommands from 'wokcommands'
 
@@ -23,7 +8,7 @@ export default (client: Client, instance: WOKCommands) => {
     // Access the guild that they joined
     const { guild } = member
 
-    // Get the channel named "welcome"
+    // Get the channel named "👥𝗠𝗲𝗺𝗯𝗲𝗿𝘀"
     const channel = guild.channels.cache.find(
       (channel) => channel.name === '👥𝗠𝗲𝗺𝗯𝗲𝗿𝘀'
     ) as TextChannel
@@ -31,12 +16,12 @@ export default (client: Client, instance: WOKCommands) => {
     // Ensure this channel exists
     if (!channel) {
       return client.users.fetch('444426639665790978').then((user) => {   // Text the bot owner when error occurs.
-        user.send('Bot had problem with welcome message')
+        user.send(`Bot had problem with welcome message in ${guild.name}`)
       })
     }
 
     const embedwelcomemsg = new MessageEmbed()      // Welcome Message itself.
-    .setColor('RANDOM')
+    .setColor('#000000')
     .setTitle(`**Welcome to __${guild.name}__**`)
     .setDescription(
       `Hey <@${member.id}>

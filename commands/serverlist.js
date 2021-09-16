@@ -1,9 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
-    // Best practice for the built-in help menu
     category: 'Configuration',
-    description: 'Lists all servers the bot is in',
+    description: 'DM a list of all servers the bot is in',
     // Make this command owner only.
     ownerOnly: true,
     hidden: true,
