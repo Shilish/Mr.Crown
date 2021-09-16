@@ -32,13 +32,15 @@ const client = new DiscordJS.Client({
       typeScript: true,          // Remove in index.js after compiling.
       //testServers: ['884501544815452180','547372410664517632'],
       disabledDefaultCommands: [
-        'help'
+        //'help'
         // 'command',
-        // 'language',
+        'language',
         // 'prefix',
         // 'requiredrole'
       ],
     })
+
+    .setMongoPath(process.env.MONGO_URI)
 
     .setBotOwner('444426639665790978')    // Sets Bot's Owner.
 
