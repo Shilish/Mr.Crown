@@ -2,7 +2,7 @@
 // npm run tsc - for running ts to js compiler
 // Remove typeScript: true, from index.js after compiling
 
-import DiscordJS, { ApplicationCommandManager, ClientVoiceManager, CommandInteraction, Guild, Intents, MessageEmbed } from 'discord.js'
+import DiscordJS, { BaseMessageComponent, ClientApplication, Intents, Message } from 'discord.js'
 import WOKCommands from 'wokcommands'
 import path from 'path'
 import dotenv from 'dotenv'
@@ -20,7 +20,7 @@ const client = new DiscordJS.Client({
     ],
   })
 
-  client.on('ready', () =>{
+  client.on('ready', (message) =>{
     console.log('Bot active and online.')
     client.users.fetch('444426639665790978').then((user) => {      //Text the bot owner when bot start/restarts
       user.send('Bot was restarted --- '+client.readyAt)

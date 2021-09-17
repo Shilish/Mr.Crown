@@ -8,9 +8,15 @@ exports.default = {
     callback: function (_a) {
         var message = _a.message, interaction = _a.interaction;
         if (message) {
-            message.reply(':satellite: :globe_with_meridians: :satellite_orbital:').then(function (resultMessage) {
+            message.reply({
+                content: ':satellite: :globe_with_meridians: :satellite_orbital:',
+                allowedMentions: { repliedUser: false }
+            }).then(function (resultMessage) {
                 var ping = resultMessage.createdTimestamp - message.createdTimestamp;
-                resultMessage.edit('Pong : ' + ping);
+                resultMessage.edit({
+                    content: 'Pong : ' + ping,
+                    allowedMentions: { repliedUser: false }
+                });
             });
         }
         if (interaction) {

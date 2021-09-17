@@ -29,7 +29,8 @@ export default {
         );
           await message.reply({
               embeds: [Invite],
-              components: [row]
+              components: [row],
+              allowedMentions: {repliedUser: false}
             })
         }
 

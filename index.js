@@ -41,7 +41,7 @@ var client = new discord_js_1.default.Client({
         discord_js_1.Intents.FLAGS.GUILD_VOICE_STATES
     ],
 });
-client.on('ready', function () {
+client.on('ready', function (message) {
     console.log('Bot active and online.');
     client.users.fetch('444426639665790978').then(function (user) {
         user.send('Bot was restarted --- ' + client.readyAt);

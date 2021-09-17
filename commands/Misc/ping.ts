@@ -10,9 +10,15 @@ export default {
 
     callback: ({ message, interaction }) => {
        if (message){
-        message.reply(':satellite: :globe_with_meridians: :satellite_orbital:').then(resultMessage => {
+        message.reply({
+            content: ':satellite: :globe_with_meridians: :satellite_orbital:',
+            allowedMentions:{repliedUser:false}
+        }).then(resultMessage => {
             const ping = resultMessage.createdTimestamp - message.createdTimestamp
-            resultMessage.edit('Pong : ' +ping)
+            resultMessage.edit({
+                content: 'Pong : ' +ping,
+                allowedMentions:{repliedUser:false}
+            })
         })
        }
         

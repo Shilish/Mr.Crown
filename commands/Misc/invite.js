@@ -63,7 +63,8 @@ exports.default = {
                             .setLabel("🔗Invite Me"));
                         return [4 /*yield*/, message.reply({
                                 embeds: [Invite],
-                                components: [row]
+                                components: [row],
+                                allowedMentions: { repliedUser: false }
                             })];
                     case 1:
                         _c.sent();
