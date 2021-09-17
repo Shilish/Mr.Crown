@@ -10,6 +10,10 @@ const setStatus = (client: Client, status: string) => {
       },
     ],
   })
+  client.user?.setActivity({
+    name: status,
+    type: 'WATCHING'
+  })
 }
 
 export default {
@@ -29,7 +33,7 @@ export default {
   // This method is invoked only once whenever the command is registered
   init: (client: Client) => {
     // TODO: Load the status from the database
-    const status = "Under Development" // Would come from the database
+    const status = "for !help" // Would come from the database
     setStatus(client, status)
   },
   

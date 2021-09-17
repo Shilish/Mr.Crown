@@ -11,9 +11,9 @@ exports.default = (function (client, instance) {
         var channel = guild.channels.cache.find(function (channel) { return channel.name === '👥𝗠𝗲𝗺𝗯𝗲𝗿𝘀'; });
         // Ensure this channel exists
         if (!channel) {
-            return client.users.fetch('444426639665790978').then(function (user) {
-                user.send("Bot had problem with welcome message in " + guild.name);
-            });
+            return; //client.users.fetch('444426639665790978').then((user) => {   // Text the bot owner when error occurs.
+            //   user.send(`Bot had problem with welcome message in ${guild.name}`)
+            // })
         }
         var embedwelcomemsg = new discord_js_1.MessageEmbed() // Welcome Message itself.
             .setColor('#000000')

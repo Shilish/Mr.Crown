@@ -15,9 +15,9 @@ export default (client: Client, instance: WOKCommands) => {
 
     // Ensure this channel exists
     if (!channel) {
-      return client.users.fetch('444426639665790978').then((user) => {   // Text the bot owner when error occurs.
-        user.send(`Bot had problem with welcome message in ${guild.name}`)
-      })
+      return //client.users.fetch('444426639665790978').then((user) => {   // Text the bot owner when error occurs.
+      //   user.send(`Bot had problem with welcome message in ${guild.name}`)
+      // })
     }
 
     const embedwelcomemsg = new MessageEmbed()      // Welcome Message itself.
