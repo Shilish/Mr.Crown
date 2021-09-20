@@ -1,4 +1,4 @@
-import { Client, TextChannel, Message } from 'discord.js'
+import { Client } from 'discord.js'
 import WOKCommands from 'wokcommands'
 
 export default (client: Client, instance: WOKCommands) => {

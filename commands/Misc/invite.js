@@ -53,7 +53,7 @@ exports.default = {
                         botavatar = (_b = client.user) === null || _b === void 0 ? void 0 : _b.avatarURL();
                         if (!message) return [3 /*break*/, 2];
                         Invite = new discord_js_1.MessageEmbed()
-                            .setTitle("Invite Me!")
+                            .setTitle("__Invite Me!__")
                             .setDescription("**A Multipurpose Discord bot.**\n          \n          *Under HEAVY DEVELOPMENT \n          ~BETA~Stages~*")
                             .setColor('RANDOM')
                             .setThumbnail('' + botavatar);
@@ -72,7 +72,7 @@ exports.default = {
                     case 2:
                         if (!interaction) return [3 /*break*/, 4];
                         Invite = new discord_js_1.MessageEmbed()
-                            .setTitle("Invite Me!")
+                            .setTitle("__Invite Me!__")
                             .setDescription("**A Multipurpose Discord bot.**\n          \n          *Under HEAVY DEVELOPMENT \n          ~BETA~Stages~*")
                             .setColor('RANDOM')
                             .setThumbnail('' + botavatar);

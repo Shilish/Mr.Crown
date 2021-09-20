@@ -12,7 +12,7 @@ export default {
         const botavatar = client.user?.avatarURL()
         if (message){
           const Invite = new MessageEmbed()
-          .setTitle("Invite Me!")
+          .setTitle("__Invite Me!__")
           .setDescription(`**A Multipurpose Discord bot.**
           
           *Under HEAVY DEVELOPMENT 
@@ -36,7 +36,7 @@ export default {
 
         if (interaction){
           const Invite = new MessageEmbed()
-          .setTitle("Invite Me!")
+          .setTitle("__Invite Me!__")
           .setDescription(`**A Multipurpose Discord bot.**
           
           *Under HEAVY DEVELOPMENT 
