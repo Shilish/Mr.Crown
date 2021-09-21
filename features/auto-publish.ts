@@ -1,10 +1,8 @@
 import { Client } from 'discord.js'
-import WOKCommands from 'wokcommands'
 
-export default (client: Client, instance: WOKCommands) => {
+export default (client: Client) => {
   // Listen for new messages
   client.on('messageCreate', (messageCreate) => {
-    //const channel = messageCreate
     // console.log(messageCreate.channel.type)
 
     // try{
@@ -18,7 +16,7 @@ export default (client: Client, instance: WOKCommands) => {
 
     if (messageCreate.crosspostable === true){
         messageCreate.crosspost()
-        console.log('Crossposted/Published message - '+messageCreate.createdAt)
+        //console.log('Crossposted/Published message - '+messageCreate.createdAt)
     }
     else {return}
 

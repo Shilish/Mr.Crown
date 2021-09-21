@@ -15,14 +15,15 @@ exports.default = (function (client) {
         if (!channel) {
             return;
         }
-        //const icon = guild.iconURL.toString()
+        //const icon = (guild.iconURL(),{dynamic: true})
+        //const userIcon = (member.user.displayAvatarURL(),{dynamic:true})
         var embedwelcomemsg = new discord_js_1.MessageEmbed() // Welcome Message itself.
             .setColor('RANDOM')
             .setTitle("**Welcome to __" + guild.name + "__**")
-            .setDescription("Hey <@" + member.id + ">\n\n       Please head over to our **__Rules channel__** for more ***information and rules*** about our server.\n       \n       *You're member " + guild.memberCount + "*\n       \n       Have a nice stay!")
-            .setAuthor('⊶⊷', 'https://cdn.discordapp.com/attachments/561917883958034444/887810385984503829/Anouncement_Pine.gif')
+            .setDescription("Hey <@" + member.id + ">\n\n       Please head over to our **__Rules channel__** for more ***information and rules*** about our server.\n       \n       *You're member - " + guild.memberCount + "*\n       \n       Have a nice stay!")
+            .setAuthor("" + member.user.tag, "" + member.user.displayAvatarURL())
             .setThumbnail('' + guild.iconURL())
-            .setFooter('Invite your friends too', 'https://cdn.discordapp.com/attachments/561917883958034444/887810413994049576/Discord-Logo-White.png');
+            .setFooter('Invite your friends too.', 'https://cdn.discordapp.com/attachments/561917883958034444/887810413994049576/Discord-Logo-White.png');
         // Send the welcome message
         channel.send({
             embeds: [embedwelcomemsg]

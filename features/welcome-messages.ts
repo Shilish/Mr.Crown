@@ -21,7 +21,8 @@ export default (client: Client) => {
       return
     }
 
-    //const icon = guild.iconURL.toString()
+    //const icon = (guild.iconURL(),{dynamic: true})
+    //const userIcon = (member.user.displayAvatarURL(),{dynamic:true})
 
     const embedwelcomemsg = new MessageEmbed()      // Welcome Message itself.
     .setColor('RANDOM')
@@ -31,13 +32,13 @@ export default (client: Client) => {
 
        Please head over to our **__Rules channel__** for more ***information and rules*** about our server.
        
-       *You're member ${guild.memberCount}*
+       *You're member - ${guild.memberCount}*
        
        Have a nice stay!`
     )
-    .setAuthor('⊶⊷','https://cdn.discordapp.com/attachments/561917883958034444/887810385984503829/Anouncement_Pine.gif')
+    .setAuthor(`${member.user.tag}`,`${member.user.displayAvatarURL()}`)
     .setThumbnail(''+guild.iconURL())
-    .setFooter('Invite your friends too', 'https://cdn.discordapp.com/attachments/561917883958034444/887810413994049576/Discord-Logo-White.png')
+    .setFooter('Invite your friends too.', 'https://cdn.discordapp.com/attachments/561917883958034444/887810413994049576/Discord-Logo-White.png')
 
     // Send the welcome message
     channel.send({

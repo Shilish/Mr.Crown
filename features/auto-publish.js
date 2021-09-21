@@ -1,9 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = (function (client, instance) {
+exports.default = (function (client) {
     // Listen for new messages
     client.on('messageCreate', function (messageCreate) {
-        //const channel = messageCreate
         // console.log(messageCreate.channel.type)
         // try{
         //   if (messageCreate.crosspostable === true){
@@ -15,7 +14,7 @@ exports.default = (function (client, instance) {
         // }
         if (messageCreate.crosspostable === true) {
             messageCreate.crosspost();
-            console.log('Crossposted/Published message - ' + messageCreate.createdAt);
+            //console.log('Crossposted/Published message - '+messageCreate.createdAt)
         }
         else {
             return;
