@@ -89,13 +89,14 @@ client.on('ready', function (message) { return __awaiter(void 0, void 0, void 0,
                 new wokcommands_1.default(client, {
                     commandsDir: path_1.default.join(__dirname, 'commands'),
                     featuresDir: path_1.default.join(__dirname, 'features'),
+                    //typeScript: true,
                     //testServers: ['884501544815452180','547372410664517632'],
                     disabledDefaultCommands: [
                         //'help'
-                        // 'command',
+                        'command',
                         'language',
-                        // 'prefix',
-                        // 'requiredrole'
+                        'prefix',
+                        'requiredrole'
                     ],
                 })
                     //.setMongoPath(process.env.MONGO_URI)

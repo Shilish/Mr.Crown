@@ -34,10 +34,10 @@ const client = new DiscordJS.Client({
       //testServers: ['884501544815452180','547372410664517632'],
       disabledDefaultCommands: [
         //'help'
-        // 'command',
+        'command',
         'language',
-        // 'prefix',
-        // 'requiredrole'
+        'prefix',
+        'requiredrole'
       ],
     })
     
