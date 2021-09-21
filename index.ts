@@ -54,6 +54,10 @@ const client = new DiscordJS.Client({
             hidden: true
         },
         {
+          name: 'Memes',
+          emoji: '🐸'
+        },
+        {
             name: 'Misc',
             emoji: '🛠️'
         },

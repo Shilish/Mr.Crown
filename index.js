@@ -112,6 +112,10 @@ client.on('ready', function (message) { return __awaiter(void 0, void 0, void 0,
                         hidden: true
                     },
                     {
+                        name: 'Memes',
+                        emoji: '🐸'
+                    },
+                    {
                         name: 'Misc',
                         emoji: '🛠️'
                     },
