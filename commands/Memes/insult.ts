@@ -15,12 +15,10 @@ export default {
         if(message){
             axios.get('https://evilinsult.com/generate_insult.php?lang=en&type=text')
             .then((res) => {
-                var uName = message.author.tag.toString()
                 const emb = new MessageEmbed()
                 .setColor('RANDOM')
                 .setTitle('__Insult__')
                 .setDescription(`**${res.data}**`)
-                .setFooter(''+uName)
                 .setTimestamp()
                 message.reply({
                     embeds: [emb],
@@ -36,12 +34,10 @@ export default {
         if(interaction){
             axios.get('https://evilinsult.com/generate_insult.php?lang=en&type=text')
             .then((res) => {
-                var uName = interaction.user.tag.toString()
                 const emb = new MessageEmbed()
                 .setColor('RANDOM')
                 .setTitle('__Insult__')
                 .setDescription(`**${res.data}**`)
-                .setFooter(''+uName)
                 .setTimestamp()
                 interaction.reply({
                     embeds: [emb],

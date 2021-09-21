@@ -8,7 +8,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.ts",
+    "ts": "nodemon index.ts",
+    "js": "nodemon index.js",
     "tsc": "tsc -w --skipLibCheck"
   },
   "keywords": [],

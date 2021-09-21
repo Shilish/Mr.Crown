@@ -137,7 +137,7 @@ client.on('ready', function (message) { return __awaiter(void 0, void 0, void 0,
 client.on('messageCreate', function (message) {
     if (message.content === 'status') {
         message.reply({
-            content: "Active & Online!\nUptime: " + Math.round(client.uptime / 1000)
+            content: "Active & Online!\nUp Since: <t:" + Math.round(client.readyTimestamp / 1000) + ":R>"
         });
     }
 });

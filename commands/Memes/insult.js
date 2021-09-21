@@ -53,12 +53,10 @@ exports.default = {
                 if (message) {
                     axios_1.default.get('https://evilinsult.com/generate_insult.php?lang=en&type=text')
                         .then(function (res) {
-                        var uName = message.author.tag.toString();
                         var emb = new discord_js_1.MessageEmbed()
                             .setColor('RANDOM')
                             .setTitle('__Insult__')
                             .setDescription("**" + res.data + "**")
-                            .setFooter('' + uName)
                             .setTimestamp();
                         message.reply({
                             embeds: [emb],
@@ -74,12 +72,10 @@ exports.default = {
                 if (interaction) {
                     axios_1.default.get('https://evilinsult.com/generate_insult.php?lang=en&type=text')
                         .then(function (res) {
-                        var uName = interaction.user.tag.toString();
                         var emb = new discord_js_1.MessageEmbed()
                             .setColor('RANDOM')
                             .setTitle('__Insult__')
                             .setDescription("**" + res.data + "**")
-                            .setFooter('' + uName)
                             .setTimestamp();
                         interaction.reply({
                             embeds: [emb],

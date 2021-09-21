@@ -56,5 +56,6 @@ export default {
               components: [row]
             })
         }
-    },
+        else {return}
+      },
 } as ICommand

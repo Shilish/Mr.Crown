@@ -30,5 +30,7 @@ export default {
                interaction.editReply('Pong : ' +ping)
            }) 
        }
+
+       else {return}
     },
 } as ICommand

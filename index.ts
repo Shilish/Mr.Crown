@@ -75,7 +75,7 @@ const client = new DiscordJS.Client({
   client.on('messageCreate', (message) =>{
       if (message.content === 'status'){
           message.reply({
-              content: `Active & Online!\nUptime: ${Math.round(client.uptime!/1000)}`
+              content: `Active & Online!\nUp Since: <t:${Math.round(client.readyTimestamp!/1000)}:R>`
           })
       }
   })

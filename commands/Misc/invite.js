@@ -86,8 +86,9 @@ exports.default = {
                             })];
                     case 3:
                         _c.sent();
-                        _c.label = 4;
+                        return [3 /*break*/, 5];
                     case 4: return [2 /*return*/];
+                    case 5: return [2 /*return*/];
                 }
             });
         });

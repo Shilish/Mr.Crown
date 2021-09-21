@@ -27,5 +27,8 @@ exports.default = {
                 interaction.editReply('Pong : ' + ping);
             });
         }
+        else {
+            return;
+        }
     },
 };
