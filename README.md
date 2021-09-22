@@ -1,4 +1,4 @@
-Mr. 👑
+**Mr. 👑**
 
 A Multipurpose Discord bot.
 This is the only bot you'll need for your magnifecent discord server.
