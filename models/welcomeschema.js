@@ -25,7 +25,8 @@ var reqString = {
 };
 var schema = new mongoose_1.Schema({
     _id: reqString,
-    channelId: reqString
+    channelId: reqString,
+    guildName: reqString
 });
 var name = 'setWelcomeChannels';
 module.exports = mongoose_1.default.models[name] || mongoose_1.default.model(name, schema, name);

@@ -28,6 +28,7 @@ module.exports = {
         }, {
             _id: guild?.id,
             channelId: channel.id,
+            guildName: guild?.name
         }, {
             upsert: true
         })

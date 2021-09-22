@@ -76,6 +76,7 @@ module.exports = {
                             }, {
                                 _id: guild === null || guild === void 0 ? void 0 : guild.id,
                                 channelId: channel.id,
+                                guildName: guild === null || guild === void 0 ? void 0 : guild.name
                             }, {
                                 upsert: true
                             })];

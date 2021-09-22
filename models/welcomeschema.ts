@@ -7,7 +7,8 @@ const reqString = {
 
 const schema = new Schema({
     _id: reqString,  //guild.id
-    channelId: reqString
+    channelId: reqString,
+    guildName: reqString
 })
 
 const name = 'setWelcomeChannels'
