@@ -1,10 +1,10 @@
-**Mr. 👑**
+# **Mr. 👑**
 
 A Multipurpose Discord bot.
 This is the only bot you'll need for your magnifecent discord server.
 All Features/Commands are fully free, meaning no paid tier.
 
-Slash Commands or prefix-`!` are supported.
+Prefix-**`!`** or Slash Commands are supported.
 
 Features Include : 
 1. Welcome-Messages
@@ -12,11 +12,14 @@ Features Include :
 3. Simulate a new Member Joining
 
 Commands Include:
-1. Help
-2. Ping
-3. Flip
-4. Roll
-5. Invite
+1. Help - A help menu.
+2. Ping - Latency of the bot.
+3. Invite - Provides a Invite link/button.
+4. Flip - Flip a coin.
+5. Roll - Roll a die.
+6. Weather - Weather forcast for any location.
+7. Advice - Gives valuable advice.
+8. Insult - Insults you or any user.
 
 ~~~ All your server specific settings are stored on a Cloud-Based Database.
 ~~~ The bot has virtually NO DOWNTIME!!! So you never have to worry about any problems.
@@ -32,4 +35,5 @@ Commands Include:
 TODO : 
 1. Moderation commands
 2. Leveling system
-3. More advanced help command.
+3. More advanced help menu
+4. Live role
