@@ -26,6 +26,7 @@ Commands Include:
 ~~~ The bot is currently in it's beta, This DOES NOT mean the bot is unstable, It very much is stable.
 ~~~ New Features/Commands are added everyday and they will be automatically updated.
 
+
 ▬ Keep an eye out for new and cool stuff.
 
 
