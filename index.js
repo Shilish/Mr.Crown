@@ -72,6 +72,7 @@ var client = new discord_js_1.default.Client({
         discord_js_1.Intents.FLAGS.GUILDS,
         discord_js_1.Intents.FLAGS.GUILD_MESSAGES,
         discord_js_1.Intents.FLAGS.GUILD_MEMBERS,
+        discord_js_1.Intents.FLAGS.GUILD_PRESENCES,
         discord_js_1.Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
         discord_js_1.Intents.FLAGS.DIRECT_MESSAGES,
         discord_js_1.Intents.FLAGS.DIRECT_MESSAGE_REACTIONS,

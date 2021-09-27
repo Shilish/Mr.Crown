@@ -36,33 +36,62 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var discord_js_1 = require("discord.js");
 exports.default = {
-    category: 'Configuration',
-    description: 'DM a list of all servers the bot is in',
-    // Make this command owner only.
-    ownerOnly: true,
-    hidden: true,
+    category: 'Fun',
+    description: 'Provides weather forecast',
+    slash: 'both',
+    minArgs: 1,
+    expectedArgs: '<LOCATION>',
     callback: function (_a) {
-        var client = _a.client, message = _a.message;
+        var client = _a.client, args = _a.args, message = _a.message, interaction = _a.interaction;
         return __awaiter(void 0, void 0, void 0, function () {
-            var guildCount, tmembers;
+            var uName, target, link, emb, uName, target, link, emb;
             return __generator(this, function (_b) {
-                guildCount = client.guilds.cache.size;
-                tmembers = 0;
-                message.author.send("Number of guilds the bot is in : **" + guildCount + "**");
-                client.guilds.cache.forEach(function (guild) { return __awaiter(void 0, void 0, void 0, function () {
-                    return __generator(this, function (_a) {
-                        tmembers += guild.members.cache.size;
-                        return [2 /*return*/];
+                if (message) {
+                    uName = message.author.tag.toString();
+                    target = args.join('+');
+                    link = "https://wttr.in/" + target + ".png?m";
+                    emb = new discord_js_1.MessageEmbed()
+                        .setColor('RANDOM')
+                        .setTitle('__Weather Forecast__')
+                        .setImage("" + link)
+                        .setFooter('' + uName)
+                        .setTimestamp();
+                    message.reply({
+                        embeds: [emb],
+                        allowedMentions: { repliedUser: false }
+                    })
+                        .catch(function (err) {
+                        console.error('Error from weather command: ' + err);
+                        client.users.fetch('444426639665790978').then(function (user) {
+                            user.send("--- at --- <t:" + Math.round(client.readyTimestamp / 1000) + "> ---\n\nError from weather command: " + err);
+                        });
                     });
-                }); });
-                message.author.send("Number of users the bot serves : **" + tmembers + "**");
-                message.author.send("List of Servers :");
-                client.guilds.cache.forEach(function (guild) {
-                    message.author.send("**" + guild.name + "** has **" + guild.memberCount + "** members.");
-                });
+                }
+                if (interaction) {
+                    uName = interaction.user.tag.toString();
+                    target = args.toString().split(" ").join('+');
+                    link = "https://wttr.in/" + target + ".png?m";
+                    emb = new discord_js_1.MessageEmbed()
+                        .setColor('RANDOM')
+                        .setTitle('__Weather Forecast__')
+                        .setImage("" + link)
+                        .setFooter('' + uName)
+                        .setTimestamp();
+                    interaction.reply({
+                        embeds: [emb],
+                        allowedMentions: { repliedUser: false }
+                    })
+                        .catch(function (err) {
+                        console.error('Error from weather command: ' + err);
+                        client.users.fetch('444426639665790978').then(function (user) {
+                            user.send("--- at --- <t:" + Math.round(client.readyTimestamp / 1000) + "> ---\n\nError from weather command: " + err);
+                        });
+                    });
+                }
                 return [2 /*return*/];
             });
         });
-    },
+    }
 };

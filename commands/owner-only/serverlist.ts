@@ -1,4 +1,3 @@
-import { Client, Guild, GuildMember } from 'discord.js'
 import { ICommand } from 'wokcommands'
 
 export default {
@@ -9,10 +8,21 @@ export default {
   ownerOnly: true,
   hidden: true,
   
-  callback: ({ client, message }) => {
-      client.guilds.cache.forEach((guild) => {
-          message.author.send(`**${guild.name}** has **${guild.memberCount}** members and was created on - *${guild.createdAt}*`)
+  callback: async ({ client, message }) => {
+      const guildCount = client.guilds.cache.size
+      let tmembers = 0
+
+      message.author.send(`Number of guilds the bot is in : **${guildCount}**`)
+
+      client.guilds.cache.forEach(async (guild) => {
+        tmembers += guild.members.cache.size
       })
-      //TODO: Get server owner names and how many servers the client is a part of.
+      message.author.send(`Number of users the bot serves : **${tmembers}**`)
+      message.author.send(`List of Servers :`)
+
+      client.guilds.cache.forEach((guild) => {
+          message.author.send(`**${guild.name}** has **${guild.memberCount}** members.`)
+      })
+      //TODO: Get server owner names.
   },
 } as ICommand
