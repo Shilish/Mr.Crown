@@ -2,7 +2,8 @@
 
 A Multipurpose Discord bot.
 This is the only bot you'll need for your magnifecent discord server.
-All Features/Commands are fully free.
+All Features/Commands are fully free, meaning no paid tier.
+
 Slash Commands or prefix-`!` are supported.
 
 Features Include : 
