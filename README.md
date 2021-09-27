@@ -1,7 +1,7 @@
 # **Mr. 👑**
 
 A Multipurpose Discord bot.
-This is the only bot you'll need for your magnifecent discord server.
+This is the only bot you'll need for your magnifiecent discord server.
 All Features/Commands are fully free, meaning no paid tier.
 
 Prefix-**`!`** or Slash Commands are supported.
