@@ -29,9 +29,9 @@ const client = new DiscordJS.Client({
     })
 
     new WOKCommands(client, {
-      commandsDir: path.join(__dirname, 'commands'),
-      featuresDir: path.join(__dirname, 'features'),
-      typeScript: true,          // # Remove in index.js after compiling.#
+      commandsDir: path.join(__dirname, '../commands'),
+      featuresDir: path.join(__dirname, '../features'),
+      typeScript: true,          // ~~~ Remove in index.js after compiling.
       //testServers: ['884501544815452180','547372410664517632'],
       disabledDefaultCommands: [
         //'help'

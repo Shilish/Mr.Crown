@@ -88,8 +88,8 @@ client.on('ready', function (message) { return __awaiter(void 0, void 0, void 0,
                     user.send("Ping: " + Math.round(client.ws.ping) + "ms\nBot was restarted --- <t:" + Math.round(client.readyTimestamp / 1000) + ">");
                 });
                 new wokcommands_1.default(client, {
-                    commandsDir: path_1.default.join(__dirname, 'commands'),
-                    featuresDir: path_1.default.join(__dirname, 'features'),
+                    commandsDir: path_1.default.join(__dirname, '../commands'),
+                    featuresDir: path_1.default.join(__dirname, '../features'),
                     //typeScript: true,
                     //testServers: ['884501544815452180','547372410664517632'],
                     disabledDefaultCommands: [
