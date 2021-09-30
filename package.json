@@ -1,6 +1,6 @@
 {
   "name": "bot-creation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "engines": {
     "node": "16.x"
