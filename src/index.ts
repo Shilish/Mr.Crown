@@ -2,7 +2,7 @@
 // npm run tsc - for running ts to js compiler
 // Remove typeScript: true, from index.js after compiling
 
-import DiscordJS, { Intents, } from 'discord.js'
+import DiscordJS, { Intents } from 'discord.js'
 import WOKCommands from 'wokcommands'
 import path from 'path'
 import dotenv from 'dotenv'
@@ -31,18 +31,18 @@ const client = new DiscordJS.Client({
     new WOKCommands(client, {
       commandsDir: path.join(__dirname, '../commands'),
       featuresDir: path.join(__dirname, '../features'),
-      typeScript: true,          // ~~~ Remove in index.js after compiling.
+      //mongoUri: process.env.MONGO_URI,
+      typeScript: true,                                                // ~~~ Remove in index.js after compiling.
       //testServers: ['884501544815452180','547372410664517632'],
       disabledDefaultCommands: [
-        //'help'
+        'help',
         'command',
         'language',
-        'prefix',
+        //'prefix',
         'requiredrole'
       ],
     })
     
-    //.setMongoPath(process.env.MONGO_URI)
     .setBotOwner('444426639665790978')    // Sets Bot's Owner.
     .setCategorySettings([
         {
@@ -63,11 +63,8 @@ const client = new DiscordJS.Client({
             emoji: '🛠️'
         },
         {
-            // You can also use custom emojis by specifying the ID
-            // NOTE: Bot MUST be in the same server as the emoji
             name: 'Fun',
             emoji: '🎭',
-            //customEmoji: true.
         },
       ])
       await mongo();

@@ -90,17 +90,17 @@ client.on('ready', function (message) { return __awaiter(void 0, void 0, void 0,
                 new wokcommands_1.default(client, {
                     commandsDir: path_1.default.join(__dirname, '../commands'),
                     featuresDir: path_1.default.join(__dirname, '../features'),
+                    //mongoUri: process.env.MONGO_URI,
                     //typeScript: true,
                     //testServers: ['884501544815452180','547372410664517632'],
                     disabledDefaultCommands: [
-                        //'help'
+                        'help',
                         'command',
                         'language',
-                        'prefix',
+                        //'prefix',
                         'requiredrole'
                     ],
                 })
-                    //.setMongoPath(process.env.MONGO_URI)
                     .setBotOwner('444426639665790978') // Sets Bot's Owner.
                     .setCategorySettings([
                     {
@@ -121,11 +121,8 @@ client.on('ready', function (message) { return __awaiter(void 0, void 0, void 0,
                         emoji: '🛠️'
                     },
                     {
-                        // You can also use custom emojis by specifying the ID
-                        // NOTE: Bot MUST be in the same server as the emoji
                         name: 'Fun',
                         emoji: '🎭',
-                        //customEmoji: true.
                     },
                 ]);
                 return [4 /*yield*/, (0, mongo_1.default)()];

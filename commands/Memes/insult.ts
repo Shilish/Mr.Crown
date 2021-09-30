@@ -10,7 +10,7 @@ export default {
     slash: 'both',
     //testOnly: true,
 
-    callback: async ({message,interaction}) => {
+    callback: async ({message,interaction,client}) => {
 
         if(message){
             axios.get('https://evilinsult.com/generate_insult.php?lang=en&type=text')
@@ -18,7 +18,7 @@ export default {
                 const emb = new MessageEmbed()
                 .setColor('RANDOM')
                 .setTitle('__Insult__')
-                .setDescription(`**${res.data}**`)
+                .setDescription(`> **${res.data}**`)
                 .setTimestamp()
                 message.reply({
                     embeds: [emb],
@@ -29,6 +29,9 @@ export default {
             })
             .catch((err) => {
                 console.error('Error from insult command: '+err)
+                client.users.fetch('444426639665790978').then((user) => {      //Text the bot owner when bot has error
+                    user.send(`--- at --- <t:${Math.round(client.readyTimestamp!/1000)}> ---\n\nError from insult command: ${err}`)
+                })
             })
         }
         if(interaction){
@@ -37,7 +40,7 @@ export default {
                 const emb = new MessageEmbed()
                 .setColor('RANDOM')
                 .setTitle('__Insult__')
-                .setDescription(`**${res.data}**`)
+                .setDescription(`> **${res.data}**`)
                 .setTimestamp()
                 interaction.reply({
                     embeds: [emb],
@@ -50,6 +53,9 @@ export default {
             })
             .catch((err) => {
                 console.error('Error from insult command: '+err)
+                client.users.fetch('444426639665790978').then((user) => {      //Text the bot owner when bot has error
+                    user.send(`--- at --- <t:${Math.round(client.readyTimestamp!/1000)}> ---\n\nError from insult command: ${err}`)
+                })
             })
         }
         else {return}

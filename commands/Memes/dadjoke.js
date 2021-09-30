@@ -43,46 +43,51 @@ var axios_1 = __importDefault(require("axios"));
 var discord_js_1 = require("discord.js");
 exports.default = {
     category: 'Memes',
-    description: 'Give Advice',
+    description: 'Chad Dad',
     slash: 'both',
     //testOnly: true,
     callback: function (_a) {
         var message = _a.message, interaction = _a.interaction, client = _a.client;
         return __awaiter(void 0, void 0, void 0, function () {
+            var jk, jk;
             return __generator(this, function (_b) {
                 if (message) {
-                    axios_1.default.get('https://api.adviceslip.com/advice')
+                    jk = 'https://icanhazdadjoke.com/';
+                    axios_1.default.get(jk, { headers: {
+                            Accept: "text/plain",
+                            "User-Agent": "axios 0.21.4"
+                        } })
                         .then(function (res) {
-                        var uName = message.author.tag.toString();
                         var emb = new discord_js_1.MessageEmbed()
                             .setColor('RANDOM')
-                            .setTitle('__Advice__')
-                            .setDescription("> **" + res.data.slip.advice + "**")
-                            .setFooter('' + uName)
+                            .setTitle('__Dad Joke__')
+                            .setDescription("> **" + res.data + "**")
                             .setTimestamp();
                         message.reply({
                             embeds: [emb],
                             allowedMentions: { repliedUser: false }
                         }).then(function (resultMessage) {
-                            resultMessage.react('🤯');
+                            resultMessage.react('😜');
                         });
                     })
                         .catch(function (err) {
-                        console.error('Error from advice command: ' + err);
+                        console.error('Error from dadjoke command: ' + err);
                         client.users.fetch('444426639665790978').then(function (user) {
-                            user.send("--- at --- <t:" + Math.round(client.readyTimestamp / 1000) + "> ---\n\nError from advice command: " + err);
+                            user.send("--- at --- <t:" + Math.round(client.readyTimestamp / 1000) + "> ---\n\nError from dadjoke command: " + err);
                         });
                     });
                 }
                 if (interaction) {
-                    axios_1.default.get('https://api.adviceslip.com/advice')
+                    jk = 'https://icanhazdadjoke.com/';
+                    axios_1.default.get(jk, { headers: {
+                            Accept: "text/plain",
+                            "User-Agent": "axios 0.21.4"
+                        } })
                         .then(function (res) {
-                        var uName = interaction.user.tag.toString();
                         var emb = new discord_js_1.MessageEmbed()
                             .setColor('RANDOM')
-                            .setTitle('__Advice__')
-                            .setDescription("> **" + res.data.slip.advice + "**")
-                            .setFooter('' + uName)
+                            .setTitle('__Dad Joke__')
+                            .setDescription("> **" + res.data + "**")
                             .setTimestamp();
                         interaction.reply({
                             embeds: [emb],
@@ -90,13 +95,13 @@ exports.default = {
                         });
                         interaction.fetchReply().then(function (iReply) {
                             var msg = iReply;
-                            msg.react('🤯');
+                            msg.react('😜');
                         });
                     })
                         .catch(function (err) {
-                        console.error('Error from advice command: ' + err);
+                        console.error('Error from dadjoke command: ' + err);
                         client.users.fetch('444426639665790978').then(function (user) {
-                            user.send("--- at --- <t:" + Math.round(client.readyTimestamp / 1000) + "> ---\n\nError from advice command: " + err);
+                            user.send("--- at --- <t:" + Math.round(client.readyTimestamp / 1000) + "> ---\n\nError from dadjoke command: " + err);
                         });
                     });
                 }

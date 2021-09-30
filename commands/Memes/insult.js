@@ -47,7 +47,7 @@ exports.default = {
     slash: 'both',
     //testOnly: true,
     callback: function (_a) {
-        var message = _a.message, interaction = _a.interaction;
+        var message = _a.message, interaction = _a.interaction, client = _a.client;
         return __awaiter(void 0, void 0, void 0, function () {
             return __generator(this, function (_b) {
                 if (message) {
@@ -56,7 +56,7 @@ exports.default = {
                         var emb = new discord_js_1.MessageEmbed()
                             .setColor('RANDOM')
                             .setTitle('__Insult__')
-                            .setDescription("**" + res.data + "**")
+                            .setDescription("> **" + res.data + "**")
                             .setTimestamp();
                         message.reply({
                             embeds: [emb],
@@ -67,6 +67,9 @@ exports.default = {
                     })
                         .catch(function (err) {
                         console.error('Error from insult command: ' + err);
+                        client.users.fetch('444426639665790978').then(function (user) {
+                            user.send("--- at --- <t:" + Math.round(client.readyTimestamp / 1000) + "> ---\n\nError from insult command: " + err);
+                        });
                     });
                 }
                 if (interaction) {
@@ -75,7 +78,7 @@ exports.default = {
                         var emb = new discord_js_1.MessageEmbed()
                             .setColor('RANDOM')
                             .setTitle('__Insult__')
-                            .setDescription("**" + res.data + "**")
+                            .setDescription("> **" + res.data + "**")
                             .setTimestamp();
                         interaction.reply({
                             embeds: [emb],
@@ -88,6 +91,9 @@ exports.default = {
                     })
                         .catch(function (err) {
                         console.error('Error from insult command: ' + err);
+                        client.users.fetch('444426639665790978').then(function (user) {
+                            user.send("--- at --- <t:" + Math.round(client.readyTimestamp / 1000) + "> ---\n\nError from insult command: " + err);
+                        });
                     });
                 }
                 else {

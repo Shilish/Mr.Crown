@@ -20,7 +20,7 @@ exports.default = (function (client) {
         var embedwelcomemsg = new discord_js_1.MessageEmbed() // Welcome Message itself.
             .setColor('RANDOM')
             .setTitle("**Welcome to __" + guild.name + "__**")
-            .setDescription("Hey <@" + member.id + ">\n\n       Please head over to our **__Rules channel__** for more ***information and rules*** about our server.\n       \n       *You're member - " + guild.memberCount + "*\n       \n       Have a nice stay!")
+            .setDescription("Hey <@" + member.id + ">\n      \n       Please head over to our **__Rules channel__** for more ***information and rules*** about our server.\n       \n       > *You're member - " + guild.memberCount + "*\n       \n       Have a nice stay!")
             .setAuthor("" + member.user.tag, "" + member.user.displayAvatarURL())
             .setThumbnail('' + guild.iconURL())
             .setFooter('Invite your friends too.', 'https://cdn.discordapp.com/attachments/561917883958034444/887810413994049576/Discord-Logo-White.png');

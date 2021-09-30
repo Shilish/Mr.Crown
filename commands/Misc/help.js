@@ -39,7 +39,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var discord_js_1 = require("discord.js");
 exports.default = {
     category: 'Misc',
-    description: 'Invite Mr. 👑 to any server',
+    description: 'Docs/Guide for Mr. 👑',
     slash: 'both',
     //testOnly: true,
     callback: function (_a) {
@@ -53,19 +53,23 @@ exports.default = {
                         botavatar = (_b = client.user) === null || _b === void 0 ? void 0 : _b.avatarURL();
                         if (!message) return [3 /*break*/, 2];
                         Invite = new discord_js_1.MessageEmbed()
-                            .setTitle("__Invite Me!__")
-                            .setDescription("**A Multipurpose Discord bot.**\n\n          *~~~ALPHA~~~*\n          *~BETA~*")
+                            .setTitle("__Help__")
+                            .setDescription("*Click the link to visit the* \n          **Official Documentation** for **Mr. \uD83D\uDC51**\n\n          *~~~ALPHA~~~*\n          *~BETA~*")
                             .setColor('RANDOM')
                             .setThumbnail('' + botavatar);
                         row = new discord_js_1.MessageActionRow()
                             .addComponents(new discord_js_1.MessageButton()
                             .setStyle('LINK')
-                            .setURL('https://discord.com/api/oauth2/authorize?client_id=884500499804618782&permissions=8&scope=bot%20applications.commands')
-                            .setLabel("🔗Invite Me"))
+                            .setURL('https://accio15.gitbook.io/mr-crown/')
+                            .setLabel("🔗Docs"))
                             .addComponents(new discord_js_1.MessageButton()
                             .setStyle('LINK')
                             .setURL('https://discord.gg/UVZKvqQUAW')
-                            .setLabel("⚒️Support Server"));
+                            .setLabel("⚒️Support Server"))
+                            .addComponents(new discord_js_1.MessageButton()
+                            .setStyle('LINK')
+                            .setURL('https://github.com/Shilish/Mr.Crown')
+                            .setLabel("😺GitHub"));
                         return [4 /*yield*/, message.reply({
                                 embeds: [Invite],
                                 components: [row],
@@ -77,19 +81,23 @@ exports.default = {
                     case 2:
                         if (!interaction) return [3 /*break*/, 4];
                         Invite = new discord_js_1.MessageEmbed()
-                            .setTitle("__Invite Me!__")
-                            .setDescription("**A Multipurpose Discord bot.**\n\n          *~~~ALPHA~~~*\n          *~BETA~*")
+                            .setTitle("__Help__")
+                            .setDescription("*Click the link to visit the* \n          **Official Documentation** for **Mr. \uD83D\uDC51**\n\n          *~~~ALPHA~~~*\n          *~BETA~*")
                             .setColor('RANDOM')
                             .setThumbnail('' + botavatar);
                         row = new discord_js_1.MessageActionRow()
                             .addComponents(new discord_js_1.MessageButton()
-                            .setStyle("LINK")
-                            .setURL('https://discord.com/api/oauth2/authorize?client_id=884500499804618782&permissions=8&scope=bot%20applications.commands')
-                            .setLabel("🔗Invite Me"))
+                            .setStyle('LINK')
+                            .setURL('https://accio15.gitbook.io/mr-crown/')
+                            .setLabel("🔗Docs"))
                             .addComponents(new discord_js_1.MessageButton()
                             .setStyle('LINK')
                             .setURL('https://discord.gg/UVZKvqQUAW')
-                            .setLabel("⚒️Support Server"));
+                            .setLabel("⚒️Support Server"))
+                            .addComponents(new discord_js_1.MessageButton()
+                            .setStyle('LINK')
+                            .setURL('https://github.com/Shilish/Mr.Crown')
+                            .setLabel("😺GitHub"));
                         return [4 /*yield*/, interaction.reply({
                                 embeds: [Invite],
                                 components: [row]

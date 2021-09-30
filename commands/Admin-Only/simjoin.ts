@@ -7,8 +7,15 @@ export default {
     requiredPermissions: ['ADMINISTRATOR'],
     guildOnly: true,
 
-    callback: ({ message, args, text, client }) => {
+    callback: ({ message,client }) => {
         client.emit('guildMemberAdd', message.member!)
+        message.reply({
+            content: 'Simulated user joining the server.',
+            allowedMentions: {repliedUser: false},
+        }).then(resultMessage => {
+            setTimeout(() => message.delete(),2000)
+            setTimeout(() => resultMessage.delete(),2000)
+        })
     }
 
 } as ICommand

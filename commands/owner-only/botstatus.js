@@ -16,14 +16,10 @@ var setStatus = function (client, status) {
     });
 };
 exports.default = {
-    // Best practice for the built-in help menu
     category: 'Configuration',
     description: 'Updates the status of the bot',
-    // We need at least 1 word for the status.
-    // maxArgs is -1 by default which means no limit.
     minArgs: 1,
     expectedArgs: '<status>',
-    // Make this command owner only.
     ownerOnly: true,
     hidden: true,
     // This method is invoked only once whenever the command is registered
