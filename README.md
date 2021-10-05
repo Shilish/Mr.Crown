@@ -37,4 +37,5 @@ TODO :
 1. Moderation commands
 2. Leveling system
 3. More advanced help menu
-4. Live role
+4. Live auto-role
+5. Reddit feed
