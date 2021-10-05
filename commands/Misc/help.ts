@@ -18,7 +18,7 @@ export default {
 
           *~~~ALPHA~~~*
           *~BETA~*`)
-           .setColor('RANDOM')
+           .setColor('#000000')
            .setThumbnail(''+botavatar)
   
         const row = new MessageActionRow()
@@ -55,7 +55,7 @@ export default {
 
           *~~~ALPHA~~~*
           *~BETA~*`)
-           .setColor('RANDOM')
+           .setColor('#000000')
            .setThumbnail(''+botavatar)
   
         const row = new MessageActionRow()

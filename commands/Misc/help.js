@@ -55,7 +55,7 @@ exports.default = {
                         Invite = new discord_js_1.MessageEmbed()
                             .setTitle("__Help__")
                             .setDescription("*Click the link to visit the* \n          **Official Documentation** for **Mr. \uD83D\uDC51**\n\n          *~~~ALPHA~~~*\n          *~BETA~*")
-                            .setColor('RANDOM')
+                            .setColor('#000000')
                             .setThumbnail('' + botavatar);
                         row = new discord_js_1.MessageActionRow()
                             .addComponents(new discord_js_1.MessageButton()
@@ -83,7 +83,7 @@ exports.default = {
                         Invite = new discord_js_1.MessageEmbed()
                             .setTitle("__Help__")
                             .setDescription("*Click the link to visit the* \n          **Official Documentation** for **Mr. \uD83D\uDC51**\n\n          *~~~ALPHA~~~*\n          *~BETA~*")
-                            .setColor('RANDOM')
+                            .setColor('#000000')
                             .setThumbnail('' + botavatar);
                         row = new discord_js_1.MessageActionRow()
                             .addComponents(new discord_js_1.MessageButton()

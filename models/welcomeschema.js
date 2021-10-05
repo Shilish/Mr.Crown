@@ -18,6 +18,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var mongoose_1 = __importStar(require("mongoose"));
 var reqString = {
     type: String,
@@ -25,8 +26,9 @@ var reqString = {
 };
 var schema = new mongoose_1.Schema({
     _id: reqString,
+    guildName: reqString,
     channelId: reqString,
-    guildName: reqString
+    text: reqString
 });
-var name = 'setWelcomeChannels';
-module.exports = mongoose_1.default.models[name] || mongoose_1.default.model(name, schema, name);
+var name = 'setWelcomeChannel';
+exports.default = mongoose_1.default.models[name] || mongoose_1.default.model(name, schema, name);

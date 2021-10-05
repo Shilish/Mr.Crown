@@ -35,54 +35,39 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-var welcomeschema_1 = __importDefault(require("../../models/welcomeschema"));
-exports.default = {
-    category: 'Admin Only',
-    description: 'Set the channel in which you wish to recieve Welcome messages',
-    requiredPermissions: ['ADMINISTRATOR'],
-    minArgs: 2,
-    expectedArgs: '<Mention the Channel> <Welcome Text>',
-    slash: false,
-    guildOnly: true,
-    callback: function (_a) {
-        var guild = _a.guild, message = _a.message, args = _a.args;
-        return __awaiter(void 0, void 0, void 0, function () {
-            var target, text;
-            return __generator(this, function (_b) {
-                switch (_b.label) {
-                    case 0:
-                        target = message.mentions.channels.first();
-                        if (!target || target.type !== 'GUILD_TEXT') {
-                            return [2 /*return*/, 'Please tag a `#Text` channel'];
-                        }
-                        text = '';
-                        if (message) {
-                            args.shift();
-                            text = args.join(' ');
-                        }
-                        return [4 /*yield*/, welcomeschema_1.default.findOneAndUpdate({
-                                _id: guild === null || guild === void 0 ? void 0 : guild.id,
-                            }, {
-                                _id: guild === null || guild === void 0 ? void 0 : guild.id,
-                                channelId: target.id,
-                                text: text,
-                                guildName: guild === null || guild === void 0 ? void 0 : guild.name
-                            }, {
-                                upsert: true
-                            })];
-                    case 1:
-                        _b.sent();
-                        message.reply({
-                            content: 'Welcome-Message channel set',
-                            allowedMentions: { repliedUser: false }
-                        });
-                        return [2 /*return*/];
-                }
-            });
+exports.default = (function (client) {
+    var tmembers = 0;
+    client.guilds.cache.forEach(function (guild) { return __awaiter(void 0, void 0, void 0, function () {
+        return __generator(this, function (_a) {
+            tmembers += guild.members.cache.size;
+            return [2 /*return*/];
         });
-    }
-};
+    }); });
+    var guildCount = client.guilds.cache.size;
+    var statusOptions = [
+        'for !help',
+        "over " + tmembers + " users ^_+"
+    ];
+    var counter = 0;
+    var updateStatus = function () {
+        var _a;
+        (_a = client.user) === null || _a === void 0 ? void 0 : _a.setActivity({
+            name: statusOptions[counter],
+            type: 'WATCHING',
+        });
+        // client.user?.setPresence({
+        //     status: 'idle',
+        //     activities: [
+        //         {
+        //             name: statusOptions[counter]
+        //         }
+        //     ]
+        // })
+        if (++counter >= statusOptions.length) {
+            counter = 0;
+        }
+        setTimeout(updateStatus, 1000 * 60 * 5);
+    };
+    updateStatus();
+});

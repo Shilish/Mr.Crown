@@ -21,7 +21,7 @@ export default {
       message.author.send(`List of Servers :`)
 
       client.guilds.cache.forEach((guild) => {
-          message.author.send(`**${guild.name}** has **${guild.memberCount}** members.`)
+        message.author.send(`**${guild.name}** has **${guild.memberCount}** members.`)
       })
       //TODO: Get server owner names.
   },

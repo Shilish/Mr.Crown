@@ -65,7 +65,7 @@ var discord_js_1 = __importStar(require("discord.js"));
 var wokcommands_1 = __importDefault(require("wokcommands"));
 var path_1 = __importDefault(require("path"));
 var dotenv_1 = __importDefault(require("dotenv"));
-var mongo_1 = __importDefault(require("./mongo"));
+//import mongo from './mongo'
 dotenv_1.default.config();
 var client = new discord_js_1.default.Client({
     intents: [
@@ -79,57 +79,51 @@ var client = new discord_js_1.default.Client({
         discord_js_1.Intents.FLAGS.GUILD_VOICE_STATES
     ],
 });
-client.on('ready', function (message) { return __awaiter(void 0, void 0, void 0, function () {
+client.on('ready', function () { return __awaiter(void 0, void 0, void 0, function () {
     return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0:
-                console.log('Bot active and online.');
-                client.users.fetch('444426639665790978').then(function (user) {
-                    user.send("Ping: " + Math.round(client.ws.ping) + "ms\nBot was restarted --- <t:" + Math.round(client.readyTimestamp / 1000) + ">");
-                });
-                new wokcommands_1.default(client, {
-                    commandsDir: path_1.default.join(__dirname, '../commands'),
-                    featuresDir: path_1.default.join(__dirname, '../features'),
-                    //mongoUri: process.env.MONGO_URI,
-                    //typeScript: true,
-                    //testServers: ['884501544815452180','547372410664517632'],
-                    disabledDefaultCommands: [
-                        'help',
-                        'command',
-                        'language',
-                        //'prefix',
-                        'requiredrole'
-                    ],
-                })
-                    .setBotOwner('444426639665790978') // Sets Bot's Owner.
-                    .setCategorySettings([
-                    {
-                        name: 'Admin Only',
-                        emoji: '🔐'
-                    },
-                    {
-                        name: 'Configuration',
-                        emoji: '⚙️',
-                        hidden: true
-                    },
-                    {
-                        name: 'Memes',
-                        emoji: '🐸'
-                    },
-                    {
-                        name: 'Misc',
-                        emoji: '🛠️'
-                    },
-                    {
-                        name: 'Fun',
-                        emoji: '🎭',
-                    },
-                ]);
-                return [4 /*yield*/, (0, mongo_1.default)()];
-            case 1:
-                _a.sent();
-                return [2 /*return*/];
-        }
+        console.log('Bot Loading...');
+        client.users.fetch('444426639665790978').then(function (user) {
+            user.send("Ping: " + Math.round(client.ws.ping) + "ms\nBot was restarted --- <t:" + Math.round(client.readyTimestamp / 1000) + ">");
+        });
+        new wokcommands_1.default(client, {
+            commandsDir: path_1.default.join(__dirname, '../commands'),
+            featuresDir: path_1.default.join(__dirname, '../features'),
+            mongoUri: process.env.MONGO_URI,
+            typeScript: true,
+            //testServers: ['884501544815452180'],
+            disabledDefaultCommands: [
+                'help',
+                //'command',
+                'language',
+                //'prefix',
+                //'requiredrole'
+            ],
+        })
+            .setBotOwner('444426639665790978') // Sets Bot's Owner.
+            .setCategorySettings([
+            {
+                name: 'Admin Only',
+                emoji: '🔐'
+            },
+            {
+                name: 'Configuration',
+                emoji: '⚙️',
+                hidden: true
+            },
+            {
+                name: 'Memes',
+                emoji: '🐸'
+            },
+            {
+                name: 'Misc',
+                emoji: '⚗️'
+            },
+            {
+                name: 'Fun',
+                emoji: '🎭',
+            },
+        ]);
+        return [2 /*return*/];
     });
 }); });
 client.on('messageCreate', function (message) {

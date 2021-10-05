@@ -1,47 +1,51 @@
 import { Client, TextChannel, MessageEmbed } from 'discord.js'
+import schema from '../models/welcomeschema'
 
-const { getChannelId } = require('../commands/Admin-Only/setwelcome')
-
-// Basic welcome message feature
+const welcomeData = {} as {
+  //[GuildID]: [Channel, MessageContent]
+  [key:string]: [TextChannel, string]
+}
 export default (client: Client) => {
 
-  client.on('guildMemberAdd', (member) => {
-    const { guild } = member
+  client.on('guildMemberAdd', async member => {
+    const { guild, id } = member
 
-    const channelId = getChannelId(guild.id)
+    let data = welcomeData[guild.id]
+    if(!data){
+      const results = await schema.findById(guild.id)
+      if(!results){
+        return
+      }
 
-    if(!channelId){
-      return
+      const {channelId,text} = results
+      const channel = guild.channels.cache.get(channelId) as TextChannel
+      data = welcomeData[guild.id] = [channel, text]
     }
 
-    const channel = guild.channels.cache.get(channelId) as TextChannel;
 
-    // Ensure this channel exists
-    if (!channel) {
-      return
-    }
+    // Ensure a/the channel exists
+    // if (!data[0]) {
+    //   return
+    // }
 
-    //const icon = (guild.iconURL(),{dynamic: true})
-    //const userIcon = (member.user.displayAvatarURL(),{dynamic:true})
 
     const embedwelcomemsg = new MessageEmbed()      // Welcome Message itself.
-    .setColor('RANDOM')
+    .setColor('#303233')
     .setTitle(`**Welcome to __${guild.name}__**`)
     .setDescription(
       `Hey <@${member.id}>
       
-       Please head over to our **__Rules channel__** for more ***information and rules*** about our server.
+       ${data[1]}
        
        > *You're member - ${guild.memberCount}*
-       
-       Have a nice stay!`
+       ​​​\u200b`
     )
     .setAuthor(`${member.user.tag}`,`${member.user.displayAvatarURL()}`)
     .setThumbnail(''+guild.iconURL())
-    .setFooter('Invite your friends too.', 'https://cdn.discordapp.com/attachments/561917883958034444/887810413994049576/Discord-Logo-White.png')
+    .setFooter('Have a nice stay!', 'https://cdn.discordapp.com/attachments/561917883958034444/887810413994049576/Discord-Logo-White.png')
 
     // Send the welcome message
-    channel.send({
+    data[0].send({
       embeds: [embedwelcomemsg]
     })
   })

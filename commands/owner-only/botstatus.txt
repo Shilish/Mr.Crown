@@ -26,18 +26,20 @@ export default {
   ownerOnly: true,
   hidden: true,
   
-  // This method is invoked only once whenever the command is registered
+  // Invoked only once whenever the command is registered
   init: (client: Client) => {
-    // TODO: Load the status from the database
-    const status = "for !help" // Would come from the database
+    // let tmembers = 0
+    // client.guilds.cache.forEach(async (guild) => {
+    //   tmembers += guild.members.cache.size
+    // })
+
+    const status = `for !help` 
     setStatus(client, status)
   },
   
-  // This method is invoked anytime the command is ran
+  // Invoked anytime the command is ran
   callback: ({ client, text, message }) => {
     setStatus(client, text)
-    
-    // TODO: Store the status (text variable) to a database
     
     message.reply({
       content: 'Status set!'

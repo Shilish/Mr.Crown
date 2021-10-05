@@ -55,7 +55,7 @@ exports.default = {
                         Invite = new discord_js_1.MessageEmbed()
                             .setTitle("__Invite Me!__")
                             .setDescription("**A Multipurpose Discord bot.**\n\n          *~~~ALPHA~~~*\n          *~BETA~*")
-                            .setColor('RANDOM')
+                            .setColor('#000000')
                             .setThumbnail('' + botavatar);
                         row = new discord_js_1.MessageActionRow()
                             .addComponents(new discord_js_1.MessageButton()
@@ -79,7 +79,7 @@ exports.default = {
                         Invite = new discord_js_1.MessageEmbed()
                             .setTitle("__Invite Me!__")
                             .setDescription("**A Multipurpose Discord bot.**\n\n          *~~~ALPHA~~~*\n          *~BETA~*")
-                            .setColor('RANDOM')
+                            .setColor('#000000')
                             .setThumbnail('' + botavatar);
                         row = new discord_js_1.MessageActionRow()
                             .addComponents(new discord_js_1.MessageButton()

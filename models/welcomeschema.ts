@@ -7,11 +7,11 @@ const reqString = {
 
 const schema = new Schema({
     _id: reqString,  //guild.id
+    guildName: reqString,
     channelId: reqString,
-    guildName: reqString
+    text: reqString
 })
 
-const name = 'setWelcomeChannels'
+const name = 'setWelcomeChannel'
 
-//export = mongoose.model(name, schema)
-export = mongoose.models[name] || mongoose.model(name, schema, name)
+export default mongoose.models[name] || mongoose.model(name, schema, name)

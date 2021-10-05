@@ -6,7 +6,7 @@ import DiscordJS, { Intents } from 'discord.js'
 import WOKCommands from 'wokcommands'
 import path from 'path'
 import dotenv from 'dotenv'
-import mongo from './mongo'
+//import mongo from './mongo'
 dotenv.config()
 
 const client = new DiscordJS.Client({
@@ -22,8 +22,8 @@ const client = new DiscordJS.Client({
     ],
   })
 
-  client.on('ready', async (message) =>{
-    console.log('Bot active and online.')
+  client.on('ready', async () =>{
+    console.log('Bot Loading...')
     client.users.fetch('444426639665790978').then((user) => {      //Text the bot owner when bot start/restarts
       user.send(`Ping: ${Math.round(client.ws.ping)}ms\nBot was restarted --- <t:${Math.round(client.readyTimestamp!/1000)}>`)
     })
@@ -31,15 +31,15 @@ const client = new DiscordJS.Client({
     new WOKCommands(client, {
       commandsDir: path.join(__dirname, '../commands'),
       featuresDir: path.join(__dirname, '../features'),
-      //mongoUri: process.env.MONGO_URI,
+      mongoUri: process.env.MONGO_URI,
       typeScript: true,                                                // ~~~ Remove in index.js after compiling.
-      //testServers: ['884501544815452180','547372410664517632'],
+      //testServers: ['884501544815452180'],
       disabledDefaultCommands: [
         'help',
-        'command',
+        //'command',
         'language',
         //'prefix',
-        'requiredrole'
+        //'requiredrole'
       ],
     })
     
@@ -60,14 +60,14 @@ const client = new DiscordJS.Client({
         },
         {
             name: 'Misc',
-            emoji: '🛠️'
+            emoji: '⚗️'
         },
         {
             name: 'Fun',
             emoji: '🎭',
         },
       ])
-      await mongo();
+      //await mongo();
   })
 
   client.on('messageCreate', (message) =>{
