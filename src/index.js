@@ -89,7 +89,7 @@ client.on('ready', function () { return __awaiter(void 0, void 0, void 0, functi
             commandsDir: path_1.default.join(__dirname, '../commands'),
             featuresDir: path_1.default.join(__dirname, '../features'),
             mongoUri: process.env.MONGO_URI,
-            typeScript: true,
+            //typeScript: true,
             //testServers: ['884501544815452180'],
             disabledDefaultCommands: [
                 'help',
