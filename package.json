@@ -1,5 +1,5 @@
 {
-  "name": "bot-creation",
+  "name": "mr.crown",
   "version": "1.0.2",
   "description": "",
   "engines": {
@@ -20,7 +20,7 @@
     "discord.js": "^13.1.0",
     "dotenv": "^10.0.0",
     "mongoose": "^5.13.9",
-    "wokcommands": "^1.4.6"
+    "wokcommands": "^1.4.9"
   },
   "devDependencies": {
     "typescript": "^4.4.2"

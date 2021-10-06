@@ -32,6 +32,7 @@ const client = new DiscordJS.Client({
       commandsDir: path.join(__dirname, '../commands'),
       featuresDir: path.join(__dirname, '../features'),
       mongoUri: process.env.MONGO_URI,
+      botOwners: ['444426639665790978'],  // Sets Bot's Owner.
       typeScript: true,                                                // ~~~ Remove in index.js after compiling.
       //testServers: ['884501544815452180'],
       disabledDefaultCommands: [
@@ -43,7 +44,8 @@ const client = new DiscordJS.Client({
       ],
     })
     
-    .setBotOwner('444426639665790978')    // Sets Bot's Owner.
+    //.setBotOwner('444426639665790978')    // Sets Bot's Owner.
+    //@ts-ignore
     .setCategorySettings([
         {
           name: 'Admin Only',
