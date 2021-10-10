@@ -12,16 +12,14 @@ exports.default = (function (client) {
         // } catch(err){
         //   console.error(`...`+err)
         // }
-        if (messageCreate.crosspostable === true) {
-            messageCreate.crosspost();
-            //console.log('Crossposted/Published message - '+messageCreate.createdAt)
+        if (messageCreate.channel.type === 'GUILD_NEWS') {
+            if (messageCreate.crosspostable) {
+                messageCreate.crosspost()
+                    //.then(() => console.log('Crossposted/Published message - '+messageCreate.createdAt))
+                    .catch(function () {
+                    return;
+                });
+            }
         }
-        else {
-            return;
-        }
-        // if (messageCreate.channel.type === 'GUILD_NEWS') {
-        //   messageCreate.crosspost()
-        //   console.log('Crossposted/Published message - '+messageCreate.createdAt)
-        // }
     });
 });

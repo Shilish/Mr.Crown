@@ -13,7 +13,7 @@ export default {
 
     callback: async({guild,message,args}) => {
         const target = message.mentions.channels.first()
-        if (!target || target.type !== 'GUILD_TEXT'){
+        if (!target || target.type !== 'GUILD_TEXT' && target.type !== 'GUILD_NEWS'){
             return 'Please tag a `#Text` channel'
         }
 

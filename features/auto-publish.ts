@@ -14,17 +14,14 @@ export default (client: Client) => {
     //   console.error(`...`+err)
     // }
 
-    if (messageCreate.crosspostable === true){
+    if (messageCreate.channel.type === 'GUILD_NEWS') {
+      if (messageCreate.crosspostable){
         messageCreate.crosspost()
-        //console.log('Crossposted/Published message - '+messageCreate.createdAt)
-    }
-    else {return}
-
-    // if (messageCreate.channel.type === 'GUILD_NEWS') {
-    //   messageCreate.crosspost()
-    //   console.log('Crossposted/Published message - '+messageCreate.createdAt)
-    // }
-    
-    
-    })
+          //.then(() => console.log('Crossposted/Published message - '+messageCreate.createdAt))
+          .catch(() => {
+            return
+          })
+      }
+    }  
+  })
 }

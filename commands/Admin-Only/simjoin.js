@@ -50,15 +50,17 @@ exports.default = {
                     content: 'Simulated user joining the server.',
                     allowedMentions: { repliedUser: false },
                 }).then(function (resultMessage) {
-                    setTimeout(function () { return message.delete(); }, 2000);
-                    setTimeout(function () { return resultMessage.delete(); }, 2000);
+                    setTimeout(function () {
+                        if (message.deletable && resultMessage.deletable) {
+                            message.delete();
+                            resultMessage.delete();
+                        }
+                        // if(!message.deletable && resultMessage.deletable){
+                        //     return
+                        // }
+                    }, 3000);
                 })
-                    .catch(function (err) {
-                    console.error('Error from simjoin command: ' + err);
-                    client.users.fetch('444426639665790978').then(function (user) {
-                        user.send("--- at --- <t:" + Math.round(client.readyTimestamp / 1000) + "> ---\n\nError from simjoin command: " + err);
-                    });
-                });
+                    .catch(console.error);
                 return [2 /*return*/];
             });
         });

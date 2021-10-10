@@ -80,11 +80,5 @@ const client = new DiscordJS.Client({
       }
   })
 
-  // client.on('ready' ,async () => {
-  //   const commands = await client.api.applications(client.user.id).guilds("DEBUG GUILD ID HERE").commands.get();
-  //   commands.forEach((e) => {
-  //     console.log("   - Name: " + e["name"] + ", Id: " + e["id"]);
-  //   });
-
   client.login(process.env.HEROKU_TOKEN)
   //Accio

@@ -56,7 +56,7 @@ exports.default = {
                 switch (_b.label) {
                     case 0:
                         target = message.mentions.channels.first();
-                        if (!target || target.type !== 'GUILD_TEXT') {
+                        if (!target || target.type !== 'GUILD_TEXT' && target.type !== 'GUILD_NEWS') {
                             return [2 /*return*/, 'Please tag a `#Text` channel'];
                         }
                         text = '';
