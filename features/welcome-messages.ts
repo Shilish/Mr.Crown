@@ -8,19 +8,27 @@ const welcomeData = {} as {
 export default (client: Client) => {
 
   client.on('guildMemberAdd', async member => {
-    const { guild, id } = member
+    const { guild } = member
 
-    let data = welcomeData[guild.id]
-    if(!data){
-      const results = await schema.findById(guild.id)
+    //let data = welcomeData[guild.id]
+    // if(!data){
+    //   const results = await schema.findById(guild.id)
+    //   if(!results){
+    //     return
+    //   }
+
+    //   const {channelId,text} = results
+    //   const channel = guild.channels.cache.get(channelId) as TextChannel
+    //   data = welcomeData[guild.id] = [channel, text]
+    // }
+
+    let results = await schema.findById(guild.id)
       if(!results){
         return
       }
-
-      const {channelId,text} = results
-      const channel = guild.channels.cache.get(channelId) as TextChannel
-      data = welcomeData[guild.id] = [channel, text]
-    }
+    const {channelId,text} = results
+    const channel = guild.channels.cache.get(channelId) as TextChannel
+    results = welcomeData[guild.id] = [channel, text]
 
 
     // Ensure a/the channel exists
@@ -35,7 +43,7 @@ export default (client: Client) => {
     .setDescription(
       `Hey <@${member.id}>
       
-       ${data[1]}
+       ${results[1]}
        
        > *You're member - ${guild.memberCount}*
        ​​​\u200b`
@@ -45,7 +53,7 @@ export default (client: Client) => {
     .setFooter('Have a nice stay!', 'https://cdn.discordapp.com/attachments/561917883958034444/887810413994049576/Discord-Logo-White.png')
 
     // Send the welcome message
-    data[0].send({
+    results[0].send({
       embeds: [embedwelcomemsg]
     })
   })

@@ -44,13 +44,11 @@ var welcomeschema_1 = __importDefault(require("../models/welcomeschema"));
 var welcomeData = {};
 exports.default = (function (client) {
     client.on('guildMemberAdd', function (member) { return __awaiter(void 0, void 0, void 0, function () {
-        var guild, id, data, results, channelId, text, channel, embedwelcomemsg;
+        var guild, results, channelId, text, channel, embedwelcomemsg;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    guild = member.guild, id = member.id;
-                    data = welcomeData[guild.id];
-                    if (!!data) return [3 /*break*/, 2];
+                    guild = member.guild;
                     return [4 /*yield*/, welcomeschema_1.default.findById(guild.id)];
                 case 1:
                     results = _a.sent();
@@ -59,18 +57,16 @@ exports.default = (function (client) {
                     }
                     channelId = results.channelId, text = results.text;
                     channel = guild.channels.cache.get(channelId);
-                    data = welcomeData[guild.id] = [channel, text];
-                    _a.label = 2;
-                case 2:
+                    results = welcomeData[guild.id] = [channel, text];
                     embedwelcomemsg = new discord_js_1.MessageEmbed() // Welcome Message itself.
                         .setColor('#303233')
                         .setTitle("**Welcome to __" + guild.name + "__**")
-                        .setDescription("Hey <@" + member.id + ">\n      \n       " + data[1] + "\n       \n       > *You're member - " + guild.memberCount + "*\n       \u200B\u200B\u200B\u200B")
+                        .setDescription("Hey <@" + member.id + ">\n      \n       " + results[1] + "\n       \n       > *You're member - " + guild.memberCount + "*\n       \u200B\u200B\u200B\u200B")
                         .setAuthor("" + member.user.tag, "" + member.user.displayAvatarURL())
                         .setThumbnail('' + guild.iconURL())
                         .setFooter('Have a nice stay!', 'https://cdn.discordapp.com/attachments/561917883958034444/887810413994049576/Discord-Logo-White.png');
                     // Send the welcome message
-                    data[0].send({
+                    results[0].send({
                         embeds: [embedwelcomemsg]
                     });
                     return [2 /*return*/];
