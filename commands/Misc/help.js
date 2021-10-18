@@ -54,7 +54,7 @@ exports.default = {
                         if (!message) return [3 /*break*/, 2];
                         Invite = new discord_js_1.MessageEmbed()
                             .setTitle("__Help__")
-                            .setDescription("*Click the link to visit the* \n          **Official Documentation** for **Mr. \uD83D\uDC51**\n\n          *~~~ALPHA~~~*\n          *~BETA~*")
+                            .setDescription("*Click the link to visit the* \n          **Official Documentation** for **Mr. \uD83D\uDC51**")
                             .setColor('#000000')
                             .setThumbnail('' + botavatar);
                         row = new discord_js_1.MessageActionRow()
@@ -82,7 +82,7 @@ exports.default = {
                         if (!interaction) return [3 /*break*/, 4];
                         Invite = new discord_js_1.MessageEmbed()
                             .setTitle("__Help__")
-                            .setDescription("*Click the link to visit the* \n          **Official Documentation** for **Mr. \uD83D\uDC51**\n\n          *~~~ALPHA~~~*\n          *~BETA~*")
+                            .setDescription("*Click the link to visit the* \n          **Official Documentation** for **Mr. \uD83D\uDC51**")
                             .setColor('#000000')
                             .setThumbnail('' + botavatar);
                         row = new discord_js_1.MessageActionRow()

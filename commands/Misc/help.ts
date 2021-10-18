@@ -14,10 +14,7 @@ export default {
           const Invite = new MessageEmbed()
           .setTitle("__Help__")
           .setDescription(`*Click the link to visit the* 
-          **Official Documentation** for **Mr. 👑**
-
-          *~~~ALPHA~~~*
-          *~BETA~*`)
+          **Official Documentation** for **Mr. 👑**`)
            .setColor('#000000')
            .setThumbnail(''+botavatar)
   
@@ -51,10 +48,7 @@ export default {
           const Invite = new MessageEmbed()
           .setTitle("__Help__")
           .setDescription(`*Click the link to visit the* 
-          **Official Documentation** for **Mr. 👑**
-
-          *~~~ALPHA~~~*
-          *~BETA~*`)
+          **Official Documentation** for **Mr. 👑**`)
            .setColor('#000000')
            .setThumbnail(''+botavatar)
   

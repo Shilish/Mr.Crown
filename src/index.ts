@@ -1,4 +1,4 @@
-// npm run dev - for running nodemon
+// npm run ts/js - for running nodemon
 // npm run tsc - for running ts to js compiler
 // Remove typeScript: true, from index.js after compiling
 
@@ -36,7 +36,7 @@ const client = new DiscordJS.Client({
       typeScript: true,                                                // ~~~ Remove in index.js after compiling.
       //testServers: ['884501544815452180'],
       disabledDefaultCommands: [
-        'help',
+        //'help',
         //'command',
         'language',
         //'prefix',
@@ -44,7 +44,6 @@ const client = new DiscordJS.Client({
       ],
     })
     
-    //.setBotOwner('444426639665790978')    // Sets Bot's Owner.
     //@ts-ignore
     .setCategorySettings([
         {
@@ -81,4 +80,5 @@ const client = new DiscordJS.Client({
   })
 
   client.login(process.env.HEROKU_TOKEN)
-  //Accio
+
+  //Shilish "Accio" Vatsin

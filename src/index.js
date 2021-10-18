@@ -1,5 +1,5 @@
 "use strict";
-// npm run dev - for running nodemon
+// npm run ts/js - for running nodemon
 // npm run tsc - for running ts to js compiler
 // Remove typeScript: true, from index.js after compiling
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
@@ -93,14 +93,13 @@ client.on('ready', function () { return __awaiter(void 0, void 0, void 0, functi
             //typeScript: true,
             //testServers: ['884501544815452180'],
             disabledDefaultCommands: [
-                'help',
+                //'help',
                 //'command',
                 'language',
                 //'prefix',
                 //'requiredrole'
             ],
         })
-            //.setBotOwner('444426639665790978')    // Sets Bot's Owner.
             //@ts-ignore
             .setCategorySettings([
             {
@@ -136,4 +135,4 @@ client.on('messageCreate', function (message) {
     }
 });
 client.login(process.env.HEROKU_TOKEN);
-//Accio
+//Shilish "Accio" Vatsin
