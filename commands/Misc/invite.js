@@ -53,7 +53,7 @@ exports.default = {
                         botavatar = (_b = client.user) === null || _b === void 0 ? void 0 : _b.avatarURL();
                         if (!message) return [3 /*break*/, 2];
                         Invite = new discord_js_1.MessageEmbed()
-                            .setTitle("__Invite Me!__")
+                            .setTitle('__Invite Me!__')
                             .setDescription("**A Multipurpose Discord bot.**\n\n          *~~~ALPHA~~~*\n          *~BETA~*")
                             .setColor('#000000')
                             .setThumbnail('' + botavatar);
@@ -61,15 +61,15 @@ exports.default = {
                             .addComponents(new discord_js_1.MessageButton()
                             .setStyle('LINK')
                             .setURL('https://discord.com/api/oauth2/authorize?client_id=884500499804618782&permissions=8&scope=bot%20applications.commands')
-                            .setLabel("🔗Invite Me"))
+                            .setLabel('🔗Invite Me'))
                             .addComponents(new discord_js_1.MessageButton()
                             .setStyle('LINK')
                             .setURL('https://discord.gg/UVZKvqQUAW')
-                            .setLabel("⚒️Support Server"));
+                            .setLabel('⚒️Support Server'));
                         return [4 /*yield*/, message.reply({
                                 embeds: [Invite],
                                 components: [row],
-                                allowedMentions: { repliedUser: false }
+                                allowedMentions: { repliedUser: false },
                             })];
                     case 1:
                         _c.sent();
@@ -77,22 +77,22 @@ exports.default = {
                     case 2:
                         if (!interaction) return [3 /*break*/, 4];
                         Invite = new discord_js_1.MessageEmbed()
-                            .setTitle("__Invite Me!__")
+                            .setTitle('__Invite Me!__')
                             .setDescription("**A Multipurpose Discord bot.**\n\n          *~~~ALPHA~~~*\n          *~BETA~*")
                             .setColor('#000000')
                             .setThumbnail('' + botavatar);
                         row = new discord_js_1.MessageActionRow()
                             .addComponents(new discord_js_1.MessageButton()
-                            .setStyle("LINK")
+                            .setStyle('LINK')
                             .setURL('https://discord.com/api/oauth2/authorize?client_id=884500499804618782&permissions=8&scope=bot%20applications.commands')
-                            .setLabel("🔗Invite Me"))
+                            .setLabel('🔗Invite Me'))
                             .addComponents(new discord_js_1.MessageButton()
                             .setStyle('LINK')
                             .setURL('https://discord.gg/UVZKvqQUAW')
-                            .setLabel("⚒️Support Server"));
+                            .setLabel('⚒️Support Server'));
                         return [4 /*yield*/, interaction.reply({
                                 embeds: [Invite],
-                                components: [row]
+                                components: [row],
                             })];
                     case 3:
                         _c.sent();

@@ -67,7 +67,7 @@ exports.default = (function (client) {
                         .setFooter('Have a nice stay!', 'https://cdn.discordapp.com/attachments/561917883958034444/887810413994049576/Discord-Logo-White.png');
                     // Send the welcome message
                     results[0].send({
-                        embeds: [embedwelcomemsg]
+                        embeds: [embedwelcomemsg],
                     });
                     return [2 /*return*/];
             }

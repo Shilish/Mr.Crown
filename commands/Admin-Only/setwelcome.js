@@ -56,7 +56,8 @@ exports.default = {
                 switch (_b.label) {
                     case 0:
                         target = message.mentions.channels.first();
-                        if (!target || target.type !== 'GUILD_TEXT' && target.type !== 'GUILD_NEWS') {
+                        if (!target ||
+                            (target.type !== 'GUILD_TEXT' && target.type !== 'GUILD_NEWS')) {
                             return [2 /*return*/, 'Please tag a `#Text` channel'];
                         }
                         text = '';
@@ -70,19 +71,19 @@ exports.default = {
                                 _id: guild === null || guild === void 0 ? void 0 : guild.id,
                                 channelId: target.id,
                                 text: text,
-                                guildName: guild === null || guild === void 0 ? void 0 : guild.name
+                                guildName: guild === null || guild === void 0 ? void 0 : guild.name,
                             }, {
-                                upsert: true
+                                upsert: true,
                             })];
                     case 1:
                         _b.sent();
                         message.reply({
                             content: 'Welcome-Message channel set',
-                            allowedMentions: { repliedUser: false }
+                            allowedMentions: { repliedUser: false },
                         });
                         return [2 /*return*/];
                 }
             });
         });
-    }
+    },
 };

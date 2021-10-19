@@ -53,7 +53,7 @@ exports.default = {
                         botavatar = (_b = client.user) === null || _b === void 0 ? void 0 : _b.avatarURL();
                         if (!message) return [3 /*break*/, 2];
                         Invite = new discord_js_1.MessageEmbed()
-                            .setTitle("__Help__")
+                            .setTitle('__Help__')
                             .setDescription("*Click the link to visit the* \n          **Official Documentation** for **Mr. \uD83D\uDC51**")
                             .setColor('#000000')
                             .setThumbnail('' + botavatar);
@@ -61,19 +61,19 @@ exports.default = {
                             .addComponents(new discord_js_1.MessageButton()
                             .setStyle('LINK')
                             .setURL('https://accio15.gitbook.io/mr-crown/')
-                            .setLabel("🔗Docs"))
+                            .setLabel('🔗Docs'))
                             .addComponents(new discord_js_1.MessageButton()
                             .setStyle('LINK')
                             .setURL('https://discord.gg/UVZKvqQUAW')
-                            .setLabel("⚒️Support Server"))
+                            .setLabel('⚒️Support Server'))
                             .addComponents(new discord_js_1.MessageButton()
                             .setStyle('LINK')
                             .setURL('https://github.com/Shilish/Mr.Crown')
-                            .setLabel("😺GitHub"));
+                            .setLabel('😺GitHub'));
                         return [4 /*yield*/, message.reply({
                                 embeds: [Invite],
                                 components: [row],
-                                allowedMentions: { repliedUser: false }
+                                allowedMentions: { repliedUser: false },
                             })];
                     case 1:
                         _c.sent();
@@ -81,7 +81,7 @@ exports.default = {
                     case 2:
                         if (!interaction) return [3 /*break*/, 4];
                         Invite = new discord_js_1.MessageEmbed()
-                            .setTitle("__Help__")
+                            .setTitle('__Help__')
                             .setDescription("*Click the link to visit the* \n          **Official Documentation** for **Mr. \uD83D\uDC51**")
                             .setColor('#000000')
                             .setThumbnail('' + botavatar);
@@ -89,18 +89,18 @@ exports.default = {
                             .addComponents(new discord_js_1.MessageButton()
                             .setStyle('LINK')
                             .setURL('https://accio15.gitbook.io/mr-crown/')
-                            .setLabel("🔗Docs"))
+                            .setLabel('🔗Docs'))
                             .addComponents(new discord_js_1.MessageButton()
                             .setStyle('LINK')
                             .setURL('https://discord.gg/UVZKvqQUAW')
-                            .setLabel("⚒️Support Server"))
+                            .setLabel('⚒️Support Server'))
                             .addComponents(new discord_js_1.MessageButton()
                             .setStyle('LINK')
                             .setURL('https://github.com/Shilish/Mr.Crown')
-                            .setLabel("😺GitHub"));
+                            .setLabel('😺GitHub'));
                         return [4 /*yield*/, interaction.reply({
                                 embeds: [Invite],
-                                components: [row]
+                                components: [row],
                             })];
                     case 3:
                         _c.sent();

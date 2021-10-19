@@ -8,7 +8,7 @@ exports.default = {
     //testOnly: true,
     callback: function (_a) {
         var message = _a.message, interaction = _a.interaction;
-        var val = (Math.floor(Math.random() * (2 * 1) + 1)).toString();
+        var val = Math.floor(Math.random() * (2 * 1) + 1).toString();
         if (message) {
             var mName = message.author.tag.toString();
             var mHeads = new discord_js_1.MessageEmbed()
@@ -26,13 +26,13 @@ exports.default = {
             if (val === '1') {
                 message.reply({
                     embeds: [mHeads],
-                    allowedMentions: { repliedUser: false }
+                    allowedMentions: { repliedUser: false },
                 });
             }
             if (val === '2') {
                 message.reply({
                     embeds: [mTails],
-                    allowedMentions: { repliedUser: false }
+                    allowedMentions: { repliedUser: false },
                 });
             }
         }
@@ -53,13 +53,13 @@ exports.default = {
             if (val === '1') {
                 interaction.reply({
                     embeds: [iHeads],
-                    allowedMentions: { repliedUser: false }
+                    allowedMentions: { repliedUser: false },
                 });
             }
             if (val === '2') {
                 interaction.reply({
                     embeds: [iTails],
-                    allowedMentions: { repliedUser: false }
+                    allowedMentions: { repliedUser: false },
                 });
             }
         }
