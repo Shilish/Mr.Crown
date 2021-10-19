@@ -51,7 +51,8 @@ exports.default = {
         return __awaiter(void 0, void 0, void 0, function () {
             return __generator(this, function (_b) {
                 if (message) {
-                    axios_1.default.get('https://api.adviceslip.com/advice')
+                    axios_1.default
+                        .get('https://api.adviceslip.com/advice')
                         .then(function (res) {
                         var uName = message.author.tag.toString();
                         var emb = new discord_js_1.MessageEmbed()
@@ -60,22 +61,26 @@ exports.default = {
                             .setDescription("> **" + res.data.slip.advice + "**")
                             .setFooter('' + uName)
                             .setTimestamp();
-                        message.reply({
+                        message
+                            .reply({
                             embeds: [emb],
-                            allowedMentions: { repliedUser: false }
-                        }).then(function (resultMessage) {
+                            allowedMentions: { repliedUser: false },
+                        })
+                            .then(function (resultMessage) {
                             resultMessage.react('🤯');
                         });
                     })
                         .catch(function (err) {
                         console.error('Error from advice command: ' + err);
                         client.users.fetch('444426639665790978').then(function (user) {
+                            //Text the bot owner when bot has error
                             user.send("--- at --- <t:" + Math.round(client.readyTimestamp / 1000) + "> ---\n\nError from advice command: " + err);
                         });
                     });
                 }
                 if (interaction) {
-                    axios_1.default.get('https://api.adviceslip.com/advice')
+                    axios_1.default
+                        .get('https://api.adviceslip.com/advice')
                         .then(function (res) {
                         var uName = interaction.user.tag.toString();
                         var emb = new discord_js_1.MessageEmbed()
@@ -86,7 +91,7 @@ exports.default = {
                             .setTimestamp();
                         interaction.reply({
                             embeds: [emb],
-                            allowedMentions: { repliedUser: false }
+                            allowedMentions: { repliedUser: false },
                         });
                         interaction.fetchReply().then(function (iReply) {
                             var msg = iReply;
@@ -96,6 +101,7 @@ exports.default = {
                         .catch(function (err) {
                         console.error('Error from advice command: ' + err);
                         client.users.fetch('444426639665790978').then(function (user) {
+                            //Text the bot owner when bot has error
                             user.send("--- at --- <t:" + Math.round(client.readyTimestamp / 1000) + "> ---\n\nError from advice command: " + err);
                         });
                     });
@@ -106,5 +112,5 @@ exports.default = {
                 return [2 /*return*/];
             });
         });
-    }
+    },
 };

@@ -14,7 +14,8 @@ exports.default = (function (client) {
         // }
         if (messageCreate.channel.type === 'GUILD_NEWS') {
             if (messageCreate.crosspostable) {
-                messageCreate.crosspost()
+                messageCreate
+                    .crosspost()
                     //.then(() => console.log('Crossposted/Published message - '+messageCreate.createdAt))
                     .catch(function () {
                     return;

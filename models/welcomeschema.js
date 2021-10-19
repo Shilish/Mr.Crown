@@ -22,13 +22,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var mongoose_1 = __importStar(require("mongoose"));
 var reqString = {
     type: String,
-    required: true
+    required: true,
 };
 var schema = new mongoose_1.Schema({
     _id: reqString,
     guildName: reqString,
     channelId: reqString,
-    text: reqString
+    text: reqString,
 });
 var name = 'setWelcomeChannel';
 exports.default = mongoose_1.default.models[name] || mongoose_1.default.model(name, schema, name);

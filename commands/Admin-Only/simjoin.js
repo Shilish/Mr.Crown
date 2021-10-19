@@ -46,10 +46,12 @@ exports.default = {
         return __awaiter(void 0, void 0, void 0, function () {
             return __generator(this, function (_b) {
                 client.emit('guildMemberAdd', message.member);
-                message.reply({
+                message
+                    .reply({
                     content: 'Simulated user joining the server.',
                     allowedMentions: { repliedUser: false },
-                }).then(function (resultMessage) {
+                })
+                    .then(function (resultMessage) {
                     setTimeout(function () {
                         if (message.deletable && resultMessage.deletable) {
                             message.delete();
@@ -64,5 +66,5 @@ exports.default = {
                 return [2 /*return*/];
             });
         });
-    }
+    },
 };

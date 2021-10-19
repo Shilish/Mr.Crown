@@ -45,10 +45,7 @@ exports.default = (function (client) {
         });
     }); });
     var guildCount = client.guilds.cache.size;
-    var statusOptions = [
-        'for !help',
-        "over " + tmembers + " users ^_+"
-    ];
+    var statusOptions = ['for !help', "over " + tmembers + " users ^_+"];
     var counter = 0;
     var updateStatus = function () {
         var _a;

@@ -76,13 +76,14 @@ var client = new discord_js_1.default.Client({
         discord_js_1.Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
         discord_js_1.Intents.FLAGS.DIRECT_MESSAGES,
         discord_js_1.Intents.FLAGS.DIRECT_MESSAGE_REACTIONS,
-        discord_js_1.Intents.FLAGS.GUILD_VOICE_STATES
+        discord_js_1.Intents.FLAGS.GUILD_VOICE_STATES,
     ],
 });
 client.on('ready', function () { return __awaiter(void 0, void 0, void 0, function () {
     return __generator(this, function (_a) {
         console.log('Bot Loading...');
         client.users.fetch('444426639665790978').then(function (user) {
+            //Text the bot owner when bot start/restarts
             user.send("Ping: " + Math.round(client.ws.ping) + "ms\nBot was restarted --- <t:" + Math.round(client.readyTimestamp / 1000) + ">");
         });
         new wokcommands_1.default(client, {
@@ -99,25 +100,23 @@ client.on('ready', function () { return __awaiter(void 0, void 0, void 0, functi
                 //'prefix',
                 //'requiredrole'
             ],
-        })
-            //@ts-ignore
-            .setCategorySettings([
+        }).setCategorySettings([
             {
                 name: 'Admin Only',
-                emoji: '🔐'
+                emoji: '🔐',
             },
             {
                 name: 'Configuration',
                 emoji: '⚙️',
-                hidden: true
+                hidden: true,
             },
             {
                 name: 'Memes',
-                emoji: '🐸'
+                emoji: '🐸',
             },
             {
                 name: 'Misc',
-                emoji: '⚗️'
+                emoji: '⚗️',
             },
             {
                 name: 'Fun',
@@ -130,9 +129,9 @@ client.on('ready', function () { return __awaiter(void 0, void 0, void 0, functi
 client.on('messageCreate', function (message) {
     if (message.content === 'status') {
         message.reply({
-            content: "Active & Online!\nUp Since: <t:" + Math.round(client.readyTimestamp / 1000) + ":R>"
+            content: "Active & Online!\nUp Since: <t:" + Math.round(client.readyTimestamp / 1000) + ":R>",
         });
     }
 });
 client.login(process.env.HEROKU_TOKEN);
-//Shilish "Accio" Vatsin
+//Shilish "Accio" Vatsin <3

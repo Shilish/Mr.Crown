@@ -15,17 +15,19 @@ exports.default = {
             .setDescription("Online Since : <t:" + up + ":R>")
             .setTimestamp();
         if (message) {
-            message.reply({
+            message
+                .reply({
                 embeds: [emb],
-                allowedMentions: { repliedUser: false }
-            }).then(function (resultMessage) {
+                allowedMentions: { repliedUser: false },
+            })
+                .then(function (resultMessage) {
                 resultMessage.react('🕒');
             });
         }
         if (interaction) {
             interaction.reply({
                 embeds: [emb],
-                allowedMentions: { repliedUser: false }
+                allowedMentions: { repliedUser: false },
             });
             interaction.fetchReply().then(function (iReply) {
                 var msg = iReply;
