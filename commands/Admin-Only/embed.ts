@@ -22,6 +22,10 @@ export default {
 					`\`JSON Data\` is invalid. Please copy \`JSON Data\` from [https://discohook.org/]`
 				);
 			});
+
+			if (message.deletable) {
+				message.delete();
+			}
 		} catch (err) {
 			return `\`JSON Data\` is invalid. Please visit [https://discohook.org/] for designing your embed`;
 		}
