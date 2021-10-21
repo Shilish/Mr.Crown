@@ -70,7 +70,7 @@ This is what a codeblock will end up looking like.
 
 **[Click here](https://i.imgur.com/Cpn96bO.gif) to see how to get the id from an emote, role, or user.**
 
-#### User:
+### User:
 
 <@USER_ID>
 
@@ -79,7 +79,7 @@ This is what a codeblock will end up looking like.
 <@416358583220043796> - @Xenon
 <@!416358583220043796> if they have a nickname should be optional.
 
-#### Channels:
+### Channels:
 
 <#CHANNEL_ID>
 
@@ -87,7 +87,7 @@ This is what a codeblock will end up looking like.
 
 <#633228941116702730> -> #rules-and-info
 
-#### Roles:
+### Roles:
 
 <@&ROLE_ID>
 
