@@ -117,7 +117,7 @@ export default {
 			}
 
 			const role = message.mentions.roles.first() as Role;
-			const x = message.guild?.members.cache.get('885279374704787456');
+			const x = message.guild?.members.cache.get(client.user.id);
 			const y = x?.roles.highest.position; //Fetch the position of Highest role the bot has in guild --- y has to be greater than the role being provided
 			const z = role.position;
 			if (!role) {
