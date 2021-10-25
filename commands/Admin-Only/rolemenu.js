@@ -148,7 +148,7 @@ exports.default = {
                         _g.label = 5;
                     case 5:
                         role = message.mentions.roles.first();
-                        x = (_f = message.guild) === null || _f === void 0 ? void 0 : _f.members.cache.get('885279374704787456');
+                        x = (_f = message.guild) === null || _f === void 0 ? void 0 : _f.members.cache.get(client.user.id);
                         y = x === null || x === void 0 ? void 0 : x.roles.highest.position;
                         z = role.position;
                         if (!role) {
