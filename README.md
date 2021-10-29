@@ -4,6 +4,14 @@ Visit:
 
 https://accio15.gitbook.io/mr.crown/
 
+[![CodeFactor](https://img.shields.io/codefactor/grade/github/Shilish/Mr.Crown?style=for-the-badge)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+
+[![Version](https://img.shields.io/github/package-json/v/Shilish/Mr.Crown?color=%23000000&style=for-the-badge)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+[![LinesCode](https://img.shields.io/tokei/lines/github/Shilish/Mr.Crown?color=%23ed7d2d&label=Lines%20of%20code&style=for-the-badge)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+[![Licence](https://img.shields.io/github/license/Shilish/Mr.Crown?color=%235c40ff&style=for-the-badge)](https://github.com/Shilish/Mr.Crown/blob/main/LICENSE.md)
+
+[![Discord](https://img.shields.io/badge/Support%20Server-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/UVZKvqQUAW)
+
 # **Mr. 👑**
 
 A Multipurpose Discord bot.
