@@ -4,13 +4,29 @@ Visit:
 
 https://accio15.gitbook.io/mr.crown/
 
-[<img align="centre" alt="codefactor" src="https://img.shields.io/codefactor/grade/github/Shilish/Mr.Crown?style=for-the-badge" />](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+<p align="center">
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+<img align="centre" alt="codefactor" src="https://img.shields.io/codefactor/grade/github/Shilish/Mr.Crown?style=for-the-badge" />
+ </a>
+</p>
 
-[<img align="centre" alt="Version" src="https://img.shields.io/github/package-json/v/Shilish/Mr.Crown?color=%23000000&style=for-the-badge" />](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
-[<img align="centre" alt="LinesCode" src="https://img.shields.io/tokei/lines/github/Shilish/Mr.Crown?color=%23ed7d2d&label=Lines%20of%20code&style=for-the-badge" />](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
-[<img align="centre" alt="Licence" src="https://img.shields.io/github/license/Shilish/Mr.Crown?color=960312&style=for-the-badge" />](https://github.com/Shilish/Mr.Crown/blob/main/LICENSE.md)
+<p align="center">
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+<img align="centre" alt="Version" src="https://img.shields.io/github/package-json/v/Shilish/Mr.Crown?color=%23000000&style=for-the-badge" />
+ </a>
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+<img align="centre" alt="LinesCode" src="https://img.shields.io/tokei/lines/github/Shilish/Mr.Crown?color=%23ed7d2d&label=Lines%20of%20code&style=for-the-badge" />
+ </a>
+<a href="https://github.com/Shilish/Mr.Crown/blob/main/LICENSE.md">
+<img align="centre" alt="Licence" src="https://img.shields.io/github/license/Shilish/Mr.Crown?color=960312&style=for-the-badge" />
+ </a>
+</p>
 
-[<img align="centre" alt="Discord" src="https://img.shields.io/badge/Support%20Server-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white" />](https://discord.gg/UVZKvqQUAW)
+<p align="center">
+<a href="https://discord.gg/UVZKvqQUAW">
+<img align="centre" alt="Discord" src="https://img.shields.io/badge/Support%20Server-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white" />
+ </a>
+</p>
 
 # **Mr. 👑**
 
