@@ -1,7 +1,7 @@
 import { ICommand } from 'wokcommands';
 
 export default {
-	category: 'Admin Only',
+	category: 'Moderation',
 	description: 'Send a embed based on provided JSON data',
 	requiredPermissions: ['ADMINISTRATOR'],
 	slash: false,

@@ -72,7 +72,7 @@ export default {
 		});
 	},
 
-	callback: async ({ message, args, client, interaction }) => {
+	callback: async ({ message, args, client }) => {
 		try {
 			const channel = message.mentions.channels.first() as TextChannel;
 			if (
@@ -177,3 +177,5 @@ export default {
 		}
 	},
 } as ICommand;
+
+//Shilish "Accio" Vatsin

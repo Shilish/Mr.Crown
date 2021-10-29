@@ -41,7 +41,7 @@ client.on('ready', async () => {
 		mongoUri: process.env.MONGO_URI,
 		botOwners: ['444426639665790978'], // Sets Bot's Owner.
 		typeScript: true, // ~~~ Remove in index.js after compiling.
-		//testServers: ['884501544815452180'],
+		testServers: ['884501544815452180'],
 		disabledDefaultCommands: [
 			//'help',
 			//'command',
@@ -51,25 +51,29 @@ client.on('ready', async () => {
 		],
 	}).setCategorySettings([
 		{
+			name: 'Configuration',
+			emoji: '⚙️',
+			hidden: true,
+		},
+		{
 			name: 'Admin Only',
 			emoji: '🔐',
 		},
 		{
-			name: 'Configuration',
-			emoji: '⚙️',
-			hidden: true,
+			name: 'Moderation',
+			emoji: '⚒️',
 		},
 		{
 			name: 'Memes',
 			emoji: '🐸',
 		},
 		{
-			name: 'Misc',
-			emoji: '⚗️',
-		},
-		{
 			name: 'Fun',
 			emoji: '🎭',
+		},
+		{
+			name: 'Misc',
+			emoji: '⚗️',
 		},
 	]);
 	//await mongo();

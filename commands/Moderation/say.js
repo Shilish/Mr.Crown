@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
-    category: 'Admin Only',
+    category: 'Moderation',
     description: 'Send a embed based on provided JSON data',
     requiredPermissions: ['ADMINISTRATOR'],
     slash: false,
