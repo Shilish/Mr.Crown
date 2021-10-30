@@ -7,7 +7,7 @@ export default {
 	category: 'Fun',
 	description: 'Cool looking text formater',
 	slash: 'both',
-	testOnly: true,
+	//testOnly: true,
 
 	minArgs: 0,
 	expectedArgs: '<FONT> <Enter Some TEXT>',
