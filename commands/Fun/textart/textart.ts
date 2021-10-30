@@ -110,7 +110,10 @@ export default {
 								});
 							return;
 						}
-						const asciitxt = fs.writeFileSync('../asciitxt.txt', data!); //creates a txt file of the ascii text
+						const asciitxt = fs.writeFileSync(
+							'commands/Fun/textart/asciitxt.txt',
+							data!
+						); //creates a txt file of the ascii text
 						await channel //Sending AsciiText Raw
 							.send({
 								content: `\`\`\`${data}\`\`\``,
@@ -126,7 +129,7 @@ export default {
 								content: `**Text File**\nFont : \`${customfont.toString()}\``,
 								files: [
 									{
-										attachment: '../asciitxt.txt',
+										attachment: 'commands/Fun/textart/asciitxt.txt',
 										name: 'Text Art.txt',
 									},
 								],
@@ -246,7 +249,10 @@ export default {
 								});
 							return;
 						}
-						const asciitxt = fs.writeFileSync('../asciitxt.txt', data!); //creates a txt file of the ascii text
+						const asciitxt = fs.writeFileSync(
+							'commands/Fun/textart/asciitxt.txt',
+							data!
+						); //creates a txt file of the ascii text
 						await interaction.reply('_ _');
 						await channel //Sending AsciiText Raw
 							.send({
@@ -263,7 +269,7 @@ export default {
 								content: `**Text File**\nFont : \`${customfont.toString()}\``,
 								files: [
 									{
-										attachment: '../asciitxt.txt',
+										attachment: 'commands/Fun/textart/asciitxt.txt',
 										name: 'Text Art.txt',
 									},
 								],

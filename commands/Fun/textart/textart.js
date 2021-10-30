@@ -146,7 +146,7 @@ exports.default = {
                                             });
                                             return [2 /*return*/];
                                         }
-                                        asciitxt = fs_1.default.writeFileSync('../asciitxt.txt', data);
+                                        asciitxt = fs_1.default.writeFileSync('commands/Fun/textart/asciitxt.txt', data);
                                         return [4 /*yield*/, channel //Sending AsciiText Raw
                                                 .send({
                                                 content: "```" + data + "```",
@@ -162,7 +162,7 @@ exports.default = {
                                                 content: "**Text File**\nFont : `" + customfont_1.toString() + "`",
                                                 files: [
                                                     {
-                                                        attachment: '../asciitxt.txt',
+                                                        attachment: 'commands/Fun/textart/asciitxt.txt',
                                                         name: 'Text Art.txt',
                                                     },
                                                 ],
@@ -282,7 +282,7 @@ exports.default = {
                                             });
                                             return [2 /*return*/];
                                         }
-                                        asciitxt = fs_1.default.writeFileSync('../asciitxt.txt', data);
+                                        asciitxt = fs_1.default.writeFileSync('commands/Fun/textart/asciitxt.txt', data);
                                         return [4 /*yield*/, interaction.reply('_ _')];
                                     case 1:
                                         _a.sent();
@@ -301,7 +301,7 @@ exports.default = {
                                                 content: "**Text File**\nFont : `" + customfont_2.toString() + "`",
                                                 files: [
                                                     {
-                                                        attachment: '../asciitxt.txt',
+                                                        attachment: 'commands/Fun/textart/asciitxt.txt',
                                                         name: 'Text Art.txt',
                                                     },
                                                 ],
