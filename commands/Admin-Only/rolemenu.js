@@ -96,7 +96,7 @@ exports.default = {
         });
     },
     callback: function (_a) {
-        var message = _a.message, args = _a.args, client = _a.client, interaction = _a.interaction;
+        var message = _a.message, args = _a.args, client = _a.client;
         return __awaiter(void 0, void 0, void 0, function () {
             var channel, iMsg, targetMessage, messageId, role, x, y, z, row, option, menu, _i, _b, opt, err_1;
             var _c, _d, _e, _f;
@@ -207,3 +207,4 @@ exports.default = {
         });
     },
 };
+//Shilish "Accio" Vatsin

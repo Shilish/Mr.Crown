@@ -51,25 +51,29 @@ client.on('ready', async () => {
 		],
 	}).setCategorySettings([
 		{
+			name: 'Configuration',
+			emoji: '⚙️',
+			hidden: true,
+		},
+		{
 			name: 'Admin Only',
 			emoji: '🔐',
 		},
 		{
-			name: 'Configuration',
-			emoji: '⚙️',
-			hidden: true,
+			name: 'Moderation',
+			emoji: '⚒️',
 		},
 		{
 			name: 'Memes',
 			emoji: '🐸',
 		},
 		{
-			name: 'Misc',
-			emoji: '⚗️',
-		},
-		{
 			name: 'Fun',
 			emoji: '🎭',
+		},
+		{
+			name: 'Misc',
+			emoji: '⚗️',
 		},
 	]);
 	//await mongo();
