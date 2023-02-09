@@ -1,4 +1,4 @@
-#### This project is no longer being hosted on any cloud service as it isn't financially viable in the long term
+#### This project is no longer being hosted on any cloud service as it isn't financially viable in the long term.
 
 ##### This README is not updated frequently to know more about Mr. 👑
 
