@@ -4,6 +4,7 @@
 Visit:
 https://accio15.gitbook.io/mr.crown/
 
+-> ~~The project is hosted on Heroku~~
 
 -> ~~This project is no longer being hosted on any cloud service as it isn't financially viable in the long term.~~
 
