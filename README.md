@@ -63,7 +63,7 @@ Commands Include:
 
 ```All your server specific settings are stored on a Cloud-Based Database.
 ~~~ The bot has virtually NO DOWNTIME!!! So you never have to worry about any problems.
-~~~ The bot is currently in it's beta, This DOES NOT mean the bot is unstable, It very much is stable.
+~~~ <s>The bot is currently in it's beta, This DOES NOT mean the bot is unstable, It very much is stable.<\s>
 ~~~ New Features/Commands are added everyday and they will be automatically updated.
 
 
