@@ -61,7 +61,8 @@ Commands Include:
 7. Advice - Gives valuable advice.
 8. Insult - Insults you or any user.
 
-```All your server specific settings are stored on a Cloud-Based Database.
+```
+~~~ All your server specific settings are stored on a Cloud-Based Database.
 ~~~ The bot has virtually NO DOWNTIME!!! So you never have to worry about any problems.
 
 
@@ -69,11 +70,9 @@ Commands Include:
 
 
 
-
-
 TODO :
-1. Moderation commands
-2. Leveling system
-4. Live auto-role
+1. Moderation commands [DONE]
+2. Leveling system 
+4. Live auto-role [IMPLEMENTING]
 5. Reddit feed
 ```
