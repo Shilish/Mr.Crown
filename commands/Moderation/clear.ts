@@ -5,7 +5,7 @@ export default {
 	category: 'Moderation',
 	description:
 		'Delete `n` number of messages from the `channel` and/or a `specified user`',
-	aliases: ['delete', 'cc'],
+	aliases: ['delete', 'cc', 'purge'],
 	requiredPermissions: ['ADMINISTRATOR'],
 	slash: false,
 	guildOnly: true,

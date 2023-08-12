@@ -22,6 +22,7 @@
     "dotenv": "^10.0.0",
     "figlet": "^1.5.2",
     "mongoose": "^6.0.10",
+    "nodemon": "^2.0.15",
     "wokcommands": "^1.5.1"
   },
   "devDependencies": {
