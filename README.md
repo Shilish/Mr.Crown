@@ -1,10 +1,12 @@
-#### This project is no longer being hosted on any cloud service as it isn't financially viable in the long term.
 
 ##### This README is not updated frequently to know more about Mr. 👑
 
 Visit:
-
 https://accio15.gitbook.io/mr.crown/
+
+<s>This project is no longer being hosted on any cloud service as it isn't financially viable in the long term.
+
+
 
 <p align="center">
 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
