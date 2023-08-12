@@ -4,7 +4,8 @@
 Visit:
 https://accio15.gitbook.io/mr.crown/
 
-~~This project is no longer being hosted on any cloud service as it isn't financially viable in the long term.~~
+-> ~~This project is no longer being hosted on any cloud service as it isn't financially viable in the long term.~~
+-> The project is hosted as a Docker Container on Linux.
 
 
 
